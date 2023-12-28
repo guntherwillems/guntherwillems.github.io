@@ -1,0 +1,254 @@
+/*
+ Theme by Gunther Willems 122012 2013
+ 2018 updated for usage in Drupal
+*/
+
+div.cogs { /* for browsers not supporting the canvas element*/
+ width: 189px;
+ height: 189px;
+ background-image: url("../images/indexcog.png");
+ background-repeat:no-repeat;
+}
+
+div.canvaswrapperindex {
+  width: 189px;
+  height: 189px;
+  margin: 1.5em auto 1.5em auto;
+}
+
+/* reset page layout */
+
+div.wrapper {
+ border-style: none;
+ border-width: 0px;
+ border-radius: 0px;
+ border-color: none;
+
+ background-color: white;
+ background-image: none;
+ margin: 0.63em auto;
+ max-width: 55em;
+}
+
+body {
+ /* base font-size of 16px (1em), base line height of 24px on desktop browsers */
+ font-size: 100%;
+ line-height: 1.5em;
+ font-family: 'Labrada', Arial, sans-serif;
+ background-color: white;
+}
+
+header {
+  min-height: 3.13em;
+}
+
+header h1 {
+ font-size: 2em;
+ font-family: 'Labrada', Arial, sans-serif;
+}
+
+main:after {
+ content: "";
+}
+
+/* menu */
+
+div.region-secondary-menu {
+ max-width: 46em;
+ margin: 0px 4% 0px auto;
+ font-size: 1em;
+ 
+ position: relative; /* needed for z-index to work */
+ z-index: 1;
+}
+
+div.region-primary-menu {
+ max-width: 46em;
+ margin: -0.9em 4% 0px auto;
+ font-size: 1.2em;
+ font-weight: 500;
+ 
+ position: relative; /* needed for z-index to work */
+ z-index: 1;
+ /*clear: both; remove float: right from region-secondary-menu, or clear: right; */;
+}
+
+div.region-secondary-menu ul {
+  margin-top: 0.38em;
+}
+
+div.region-primary-menu ul, div.region-secondary-menu ul { 
+  text-align: right;
+  list-style-position: inside;
+}
+
+div.region-primary-menu li, div.region-secondary-menu li { 
+ display: inline;
+ list-style-type: none;
+ text-decoration: none;
+}
+
+div.region-primary-menu li a {
+ color: black;
+ text-decoration: none;
+}
+
+div.region-secondary-menu li a {
+ color: #D7D7D7;
+ text-decoration: none;
+}
+
+div.region-primary-menu li:after, div.region-secondary-menu li:after { 
+ content: " | ";
+}
+
+div.region-secondary-menu li:after {
+  color: #D7D7D7;
+}
+
+div.region-primary-menu li:last-child:after, div.region-secondary-menu li:last-child:after { 
+ content: "";
+}
+
+div.region-primary-menu li a:hover, div.region-secondary-menu li a:hover {
+ border-bottom: 0.19em solid #C14F4F;
+}
+
+div.region-primary-menu > ol, nav > ol, div.region-secondary-menu > ol, nav > ol {
+ margin: 0;
+}
+
+div.region-primary-menu li:first-child a {
+ color: #C14F4F;
+}
+
+/* Set Drupal styles */
+
+div.views-field {
+ line-height: 1.5em;
+ font-family: 'Labrada', Arial, sans-serif;
+ font-weight: 500;
+ text-align: center;
+}
+
+div.views-field a {
+ color: none;
+ text-decoration: none;
+ font-size: 1.55em;
+ line-height: 1.3em;
+}
+
+div.views-field a:hover {
+ color: #C14F4F;
+}
+
+main a {
+ color: black;
+}
+
+div.views-row {
+ color: black;
+}
+
+div.views-row:last-child a {
+ color: #C14F4F;
+}
+
+div.views-row:last-child a:hover {
+  border-bottom: 0.1em solid #C14F4F;
+}
+
+/*_:-ms-lang(x), .ie10up  div.views-row:last-child {
+ color: black;
+}*/
+
+
+
+/* Sidebar */
+
+div.view-content {
+  margin-top: -10px;
+}
+
+div.sidebar {
+  text-align: left;
+  margin-top: 2em;
+  background-color: #f8f8f8;
+  font-size: 1.1em;
+}
+
+/* to only make the padding bigger without the container */
+aside.layout-sidebar-first {
+  padding: 0 1em;
+}
+
+div.sidebar p {
+  font-family: 'Poppins', georgia, serif;
+  font-size: 0.83em;
+  line-height: 1.4em;
+}
+
+div.sidebar p.text a {
+ color: #555555;
+ text-decoration: none;
+ font-weight: bold;
+ font-size: 1.07em;
+}
+
+div.sidebar p.title {
+  color: #C14F4F;
+  margin-bottom: 0;
+  font-size: 1em;
+}
+
+div.sidebar p.title a {
+  color: #C14F4F;
+  text-decoration: none;
+  font-weight: bold;
+  /*font-size: 1.05em;*/
+}
+
+div.sidebar p a:hover {
+ color: #C14F4F;
+}
+
+div.sidebar p.title a:hover {
+  border-bottom: 1px solid #C14F4F;
+}
+
+/* footer */
+
+footer p {
+  margin: 2em 0 1em 0;
+  padding-top: 1em;
+  padding-bottom: 0;
+  text-align: center;
+}
+
+footer span {
+  border-width: 1px;
+  border-style: dotted;
+  margin: 0px 0px 0px 0px;
+}
+
+/* Drupal regions */
+div.layout-content {
+  margin-top: 1.8em;
+}
+
+@media all and (min-width: 44em) {
+  div.sidebar {
+    float: left;
+    width: 33%;
+    font-size: 1em;
+  }
+  div.view-content {
+    float: left;
+    width: 65%;
+    margin-top: -50px;
+  }
+  footer p {
+    clear: both;
+    width: 65%;
+  }
+}

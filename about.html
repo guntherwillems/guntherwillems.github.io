@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Key:202212111022 -->
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>About this site</title>
+
+  <meta name="generator" content="Drupal 8 (https://www.drupal.org)"/>
+  <meta name="author" content="Gunther WILLEMS"/>
+
+
+  <link rel="stylesheet" media="all" href="/main/assets/css/style.css"/>
+  <link rel="stylesheet" media="all" href="/main/assets/font/main_f1.css"/>
+  <link rel="stylesheet" media="all" href="/main/assets/css/about.css"/>
+</head>
+
+<body>
+
+<div class="wrapper" role="main" id="page">
+  <header>
+    <div class="region region-secondary-menu">
+      <nav class="block block-menu navigation menu--account" id="block-cogs-account-menu">
+      </nav>
+    </div>
+    <div class="region region-header">
+      <h1 class="page-title">About this site</h1>
+    </div>
+    <div class="region region-primary-menu">
+      <nav>
+        <ul class="menu">
+          <li class="menu-item">
+            <a href="/">Home</a>
+          </li>
+          <li class="menu-item">
+            <a href="/blog" title="Blog">Blog</a>
+          </li>
+          <li class="menu-item menu-item--active-trail">
+            <a href="/about" title="About this site">About</a>
+          </li>
+          <li class="menu-item">
+            <a href="/sitemap" title="Sitemap">Sitemap</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="canvassquare">
+      <canvas id="canvassquare" width="320" height="170">
+        <div class="cogs"></div>
+      </canvas>
+    </div>
+
+    <div class="layout-content">
+      <article>
+        <p><em class="bigger">Welcome</em> on my mechanically driven website where I test modern web technologies.</p>
+
+        <h2>Anatomy of the website</h2>
+
+        <p>The website uses the standards <a href="http://www.w3.org/TR/html5/">HTML5</a>, <a
+          href="http://www.w3.org/Style/CSS/current-work">CSS 3</a>, <a
+          href="http://www.w3.org/standards/webdesign/script.html">JavaScript</a> and <a
+          href="http://www.w3.org/html/wg/drafts/2dcontext/html5_canvas/">HTML Canvas animations</a>.</p>
+
+        <div class="imagewithtext">
+          <div class="leftwide"><img alt="jamstack" class="logojamstack"
+                                     src="/main/images/logo/jamstack-full-logo.svg"/></div>
+
+          <div class="right">It is built on the <a href="https://jamstack.org/">JAMstack</a> architecture with a
+            decoupled&nbsp;CMS. At the frontend the website only consists of statically generated HTML files.
+          </div>
+        </div>
+
+        <div class="imagewithtext">
+          <div class="left"><img alt="drupal" class="logodrupal" src="/main/images/logo/drupal_EL_blue_PANTONE.svg"/>
+          </div>
+
+          <div class="right">At the backend it runs on the CMS platform <a href="https://www.drupal.org/">Drupal</a>
+          </div>
+        </div>
+
+        <div class="imagewithtext">
+          <div class="left"><img alt="WordPress" class="logowordpress" src="/main/images/logo/wordpress-logo.svg"/>
+          </div>
+
+          <div class="right">To study and follow the most popular CMS, I also created a <a
+            href="https://wordpress.org/">WordPress</a>&nbsp;version of this website.
+          </div>
+        </div>
+
+        <p>To make it possible to study and use all these different technologies with the same content, I created this
+          web stack.</p>
+
+        <div class="halfcenter"><img alt="JAMstack GuntherWillems.com schema" class="full"
+                                     onclick="window.open(this.src, '_self')"
+                                     src="/main/images/about/jamstack-guntherwillems-com.png"/></div>
+
+        <p>I have 2 backend content sources (Drupal &amp; markdown files) that I can sync with a self-written custom
+          module&nbsp;(PHP/Drupal API) in Drupal. The markdown files have metadata in a YAML front matter block.</p>
+
+        <p>With 2 static site generators (SSG) that I have written in PHP, I can generate the static HTML files from
+          these 2 sources. Editing is possible within Drupal or with a self-written program that uses a JavaScript
+          editor to modify the markdown files.</p>
+
+        <aside>My technical comparison: <a href="blog/drupal-vs-wordpress">Drupal vs WordPress</a>.<br/>
+          My JAMstack summary with schema: <a href="blog/jamstack-explained">JAMstack explained</a>.
+        </aside>
+        <!--p><img alt="Drupal Association Individual Member" src="/main/images/logo/Drupal_Association_ind_member_140.jpg" /></p-->
+
+        <p>Because in HTML5 the emphasis is on
+          <mark>semantics</mark>
+          , I opted to create a
+          <mark>minimalistic</mark>
+          responsive website.
+        </p>
+
+        <h3>Cogs</h3>
+
+        <p><img alt="Cog symbol" class="symbolimage" src="/main/images/about/cog-symbol.jpg"/> The rotating cog
+          animations are created with the HTML5 2D canvas element and JavaScript. For a fluid animation 2 canvas
+          elements are used. One to pre-render the next frame and one to show the last completed frame. Slower devices
+          are detected and the refresh rate is adapted accordingly. Everything is drawn with vector paths (Bézier
+          curves) in real time. This shows the power of the canvas API and the current web browsers.</p>
+
+        <h2>My website over the years</h2>
+
+        <p>It evolved as new standards became important. From HTML to HTML 4 to&nbsp;XHTML 1 Strict with CSS 1.0 to
+          HTML5 with CSS 3.&nbsp;It changed from a layout with tables to a flexible 'liquid layout' to a mobile-first
+          &amp; responsive design in Drupal 8 and WordPress. Afterwards I implemented the JAMstack architecture.<br/>
+          Two pages from the 2007 version can be seen <a href="/main/old/index.html">here</a>. The about link is
+          working.</p>
+
+        <p>2001</p>
+
+        <p class="wide"><img alt="site in 2001 index" src="/main/images/site2001index.jpg"/><img alt="site in 2001"
+                                                                                                 src="/main/images/site2001.jpg"/>
+        </p>
+
+        <p>2007</p>
+
+        <p class="wide"><a href="/main/old/index.html"><img alt="site in 2007 index"
+                                                            src="/main/images/site2007index.jpg"/><img
+          alt="site in 2007" src="/main/images/site2007.jpg"/></a></p>
+
+        <p>2013</p>
+
+        <p class="wide"><img alt="site in 2013 index" src="/main/images/site2013index.jpg"/><img alt="site in 2013"
+                                                                                                 src="/main/images/site2013.jpg"/>
+        </p>
+      </article>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="region region-footer">
+      <p><small>© All text and images are copyright by Gunther Willems.</small></p>
+    </div>
+  </footer>
+
+</div>
+
+<script src="/main/assets/js/aboutannimation.js"></script>
+</body>
+</html>

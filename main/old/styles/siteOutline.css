@@ -1,0 +1,112 @@
+/* ie needs padding: 1px. For this the width of the images must be 1 less (width and height)! */
+
+html{
+   margin: 0;
+   padding: 0;
+}
+
+body {
+  text-align: center; /* for ie */
+  margin: 5px;
+  padding: 0;
+  background-color: #2e0912;
+  color: black;
+}
+
+body,p {
+  font-family: Verdana, Arial, Helvetica;  /*cursive, fantasy, monospace, sans-serif, serif*/
+  font-size: 85%;
+}
+
+div#container
+{
+  position: relative;
+  width: 768px;
+  margin-top: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5px;
+  text-align: left;
+  background-color: #eeeeee;
+}
+
+div#layout1{
+  position: absolute;
+  z-index: 1;
+  background-image: url(../images/siteOutline.jpg);
+  background-repeat: no-repeat;
+  left: 59px;
+  top: 20px;
+  width: 709px;
+  height: 396px;
+}
+
+
+div#leftMenuDiv{
+  position: absolute;
+  z-index: 2;
+  left: 0px;
+  top: 75px;
+  width: 130px;
+  height: 320px;
+  padding: 0px;
+  background-color: #c1c08f;
+  color: #7e0305;
+  
+  opacity: .94;            /* CSS3, Mozilla 1.7+, Safari 1.2+, FireFox 0.9+, Opera 9, IE 7.0, Konqueror? */ 
+  -moz-opacity: 0.94;        /* Mozilla < 1.7 (2003) / Firefox 0.8 (2004) */ 
+  -khtml-opacity: 0.94;        /* Safari 1.1, Konqueror 3.1 (support removed later) */ 
+  filter: alpha(opacity=94);    /* Internet Explorer 5.5, 6 */
+
+} 
+
+ul#leftMenu{
+  margin: 20px 10px 10px 10px;
+  padding: 0; /* important for firefox and opera */
+  text-align: left;
+}
+
+ul#leftMenu li{
+  margin: 12px 5px 12px 5px;
+  font-weight: bold;
+  list-style-type: none;
+}
+
+ul#leftMenu li:hover{
+  text-decoration: none;
+}
+
+ul#leftMenu a{
+  padding: 2px 2px 3px 2px;
+  display: block;
+  color: #8b2c23;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 80%;
+  height: auto;
+  height: 1%; /* for ie, but doesn't work in IE7, put heigth: auto in next definition */
+
+}
+
+html > body ul#leftMenu a{height: auto;} /* This is not reconized by IE6*/
+
+ul#leftMenu a:hover{
+  text-decoration: none;
+  background-color: #9c8a6c;
+  color: #940307;
+}
+
+
+
+div#bottomText{
+  position: absolute;
+  z-index: 3;
+  left: 350px;
+  top: 400px;
+  width:300px;
+  margin: 0;
+  visibility: visible;
+  color: #777777;
+  font-size: 55%;
+  text-align: right;
+}

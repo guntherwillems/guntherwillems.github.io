@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Key:201906101101 -->
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Drupal vs Wordpress</title>
+
+    <meta name="generator" content="Drupal 8 (https://www.drupal.org)" />
+    <meta name="author" content="Gunther WILLEMS" />
+
+
+    <link rel="stylesheet" media="all" href="/main/assets/css/style.css" />
+<link rel="stylesheet" media="all" href="/main/assets/font/main_f1.css" />    
+           
+  </head>
+
+  <body>
+
+<div class="wrapper" role="main" id="page">
+  <div class="canvaswrapper">
+    <canvas height="219" id="canvas" width="160">
+      <div class="cogs"></div>
+    </canvas>
+  </div>
+
+
+  <header>
+
+        <div class="region region-secondary-menu">
+      <nav class="block block-menu navigation menu--account" id="block-cogs-account-menu">
+      </nav>
+    </div>
+    <div class="region region-header">
+        <h1 class="page-title">Drupal vs Wordpress</h1>
+    </div>
+
+    <div class="region region-primary-menu">
+            <nav>
+        <ul class="menu">
+          <li class="menu-item">
+            <a href="/">Home</a>
+          </li>
+          <li class="menu-item">
+            <a href="/blog" title="Blog">Blog</a>
+          </li>
+          <li class="menu-item menu-item--active-trail">
+            <a href="/about" title="About this site">About</a>
+          </li>
+          <li class="menu-item">
+            <a href="/sitemap" title="Sitemap">Sitemap</a>
+          </li>
+        </ul>
+      </nav>    </div>
+
+    <div class="region region-reflection-primary-menu">
+            <nav>
+        <ul class="menu">
+          <li class="menu-item">
+            <a href="/">Home</a>
+          </li>
+          <li class="menu-item">
+            <a href="/blog" title="Blog">Blog</a>
+          </li>
+          <li class="menu-item menu-item--active-trail">
+            <a href="/about" title="About this site">About</a>
+          </li>
+          <li class="menu-item">
+            <a href="/sitemap" title="Sitemap">Sitemap</a>
+          </li>
+        </ul>
+      </nav>    </div>
+
+    <div class="region region-reflection-header">
+        <h1>Drupal vs Wordpress</h1>
+      </div>
+
+  </header>
+<main>
+  <div class="layout-content">
+    <article>
+            <div class="node__submitted">
+        <p>&#128197; 16-05-2019 &#8226; &Delta; 10-06-2019</p>
+      </div>
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item">
+<h2>A technical comparison between Drupal 8 and Wordpress 5</h2>
+
+<p>By creating my website in Drupal 8 and WordPress 5, I got a good overview of the differences between these 2 CMS platforms.</p>
+
+<div class="tableblock50">
+<div class="tableblockheader">
+<p>Drupal</p>
+</div>
+
+<div class="tableblockheader">
+<p>WordPress</p>
+</div>
+<!-- row -->
+
+<div>
+<p>Considered enterprise level. It's a&nbsp;lot more complicated than WordPress and it has a steeper learning curve. Very&nbsp;technical to&nbsp;configure,&nbsp;update&nbsp;and program.</p>
+</div>
+
+<div>
+<p>User friendly, less complex.<br />
+Use the default theme or&nbsp;activate a free or non-free theme and you are ready to go. To create a theme from scratch, you need programming skills in PHP.</p>
+</div>
+
+<div>
+<p><a href="https://w3techs.com/technologies/history_overview/content_management/all">+/- 1.9%</a> of the internet (2019)</p>
+</div>
+
+<div>
+<p><a href="https://w3techs.com/technologies/history_overview/content_management/all">+/- 34%</a> of the internet (2019)</p>
+</div>
+<!-- row -->
+
+<div>
+<p>Each individual (content) page is named a 'node'. Each node belongs to one content type.</p>
+
+<p>Standard content types:</p>
+
+<ul>
+	<li>Basic page: static pages. Has a title and body text.</li>
+	<li>Article: content that is updated more frequently. Has a title, body text, an image, tags and comments.</li>
+</ul>
+
+<p>You can create custom content types with custom fields. (Structure / Content types)</p>
+</div>
+
+<div>
+<p>Page types:</p>
+
+<ul>
+	<li>Page: static pages</li>
+	<li>Post: blog pages (updated more frequently)</li>
+</ul>
+
+<p>Custom fields can be added. It’s less flexible than Drupal. All custom fields are available on all the pages with combo boxes where you select the desired fields.</p>
+</div>
+<!-- row -->
+
+<div>
+<p>The layout of the website is defined in a theme. (YAML, twig templates, (very little or no PHP))</p>
+
+<p>In its simplest form, you define page layouts in Twig templates containing HTML code, CSS, JavaScript and Twig syntax. In Drupal you link theme blocks (Twig page elements) with content. (Structure / Block layout)</p>
+</div>
+
+<div>
+<p>The layout of the website is defined in a theme. (PHP, WordPress API)</p>
+
+<p>Page layouts and content is programmed in PHP files. You loop through data with WordPress API functions.</p>
+</div>
+<!-- row -->
+
+<div>
+<p>Hooks are needed to give some pages another page layout (landing pages). To create specific Theme Hook Suggestions.</p>
+</div>
+
+<div>
+<p>WordPress has a very complete built-in template-hierarchy <a href="https://developer.wordpress.org/themes/basics/template-hierarchy/">naming system</a>.</p>
+</div>
+<!-- row -->
+
+<div>
+<p>New functionality can be added with modules or (self-written) custom modules</p>
+</div>
+
+<div>
+<p>New functionality can be added with plugins</p>
+</div>
+<!-- row -->
+
+<div>
+<p>All custom programming is done with custom modules. These are written in modern coding standards. OOP, render arrays, dynamic queries, hooks, YAML, routing, ...</p>
+</div>
+
+<div>
+<p>Custom pages written in PHP can be saved in the theme folder. A WordPress page with the same title name creates a route for this PHP page. The body can stay empty.</p>
+</div>
+<!-- row -->
+
+<div>
+<p>Native support to define views (a selection of fields, sorted)</p>
+</div>
+
+<div>
+<p>No core support</p>
+</div>
+<!-- row -->
+
+<div>
+<p>Switch between editing in preview or HTML code (=source)</p>
+</div>
+
+<div>
+<p>Editing in</p>
+
+<ul>
+	<li>Gutenberg = the page is divided in blocks. You can edit in preview mode or source code that consisting of HTML and specific WordPress syntax.<br />
+	(The Gutenberg editor has ‘custom html’ blocks that have no preview)</li>
+</ul>
+
+<p>or</p>
+
+<ul>
+	<li>Normal editor: editing in preview mode or source code (html). Html code is automatically modified. Ex. &lt;p&gt; without attributes and &lt;br /&gt;&nbsp;are removed and is replaced with empty lines and new lines.</li>
+</ul>
+
+<aside>
+<p>To circumvent this, you could use the plugin ‘TinyMCE Advanced’ (that uses the classic editor)</p>
+</aside>
+</div>
+<!-- row -->
+
+<div>
+<p>Editing in preview is not equal to WYSIWYG</p>
+</div>
+
+<div>
+<p>Editing in preview is not equal to WYSIWYG</p>
+</div>
+<!-- row -->
+
+<div>
+<p>Set URL aliases manually or use a module like Pathauto. Hierarchy is defined by the URL name field. ex. /scale-model/cutty-sark</p>
+</div>
+
+<div>
+<p>Aliases are named slugs. They can only have one word. Ex. scale-model.<br />
+For hierarchy:<br />
+Use automatic URL naming for posts.<br />
+Pages can be structured by liking it to a parent page</p>
+</div>
+<!-- row -->
+
+<div>
+<p>Performance settings out of the box: CSS and JavaScript can automatically be minified.<br />
+Built-in caching (1 day or hours) (in configuration / performance)</p>
+</div>
+
+<div>
+<p>No native minify and caching.</p>
+
+<aside>
+<p>Some minify plugins: Autoptimize, Better WordPress Minify, Fast Velocity Minify.<br />
+Some caching plugins: WP Rocket (not free), W3 Total Cache, WP Super Cache</p>
+</aside>
+</div>
+<!-- row -->
+
+<div>
+<p>Built with PHP, Symphony, Twig</p>
+</div>
+
+<div>
+<p>Built with PHP</p>
+</div>
+<!-- row -->
+
+<div>
+<p>A revision can be created manually when saving (checkbox: Create new revision)</p>
+</div>
+
+<div>
+<p>By default, uses:</p>
+
+<ul>
+	<li>Autosave interval of 60 seconds</li>
+	<li>Creates post revisions after a modification/deletion. One per post/page per user.<br />
+	To permanently delete revisions, use a plugin like WP-Sweep</li>
+	<li>Heartbeat: at regular intervals, communicates between server and client browser (ajax). Used for auto saving, session management, revisions, …<br />
+	It can be disabled with a plugin or in functions.php</li>
+</ul>
+
+<aside>
+<p>Or add to wp-config.php<br />
+define( 'AUTOSAVE_INTERVAL', 3600 );<br />
+define('WP_POST_REVISIONS', false);</p>
+
+<p><a href="https://www.wpbeginner.com/plugins/how-to-limit-heartbeat-api-in-wordpress/">Heartbeat information</a></p>
+</aside>
+</div>
+<!-- row -->
+
+<div>
+<p>Updating a module or Drupal is done manually or by script.</p>
+</div>
+
+<div>
+<p>Updates for plugins and the WordPress system can be done automatically.</p>
+
+<aside>
+<p>(Be careful with folder security)</p>
+</aside>
+</div>
+<!-- row -->
+
+<div>
+<p>Brute Force Attacks<br />
+Account locked after 5 login attempts</p>
+</div>
+
+<div>
+<p>Login isn’t locked out after multiple wrong attempts.</p>
+
+<aside>
+<p>Possible plugin: Login LockDown</p>
+</aside>
+</div>
+<!-- row -->
+
+<div>
+<p>The REST API must be activated and configured manually</p>
+</div>
+
+<div>
+<p>REST is active by default.</p>
+
+<aside>
+<p>To disable it, use a plugin like ‘Disable XML-RPC’</p>
+</aside>
+</div>
+<!-- row --></div>
+
+<h2>Disadvantage of a frontend CMS platform</h2>
+
+<p>Performance: if the website doesn't have many visitors or has a very good caching system, the server load can be managed better.</p>
+
+<p>It still has lots of points of failures because of the many layers.<br />
+Ex. Drupal: web server / PHP / Symphony - Twig / Drupal layers / database &amp; RDBMS / modules / caching, interfaces (REST, ...), updates, security, ...</p>
+
+<p>Another modern web development architecture is <a href="https://jamstack.org/">JAMstack</a>. Here it is possible to use a CMS for backend functionalities and static generated pages at the frontend using client-side JavaScript and APIs for interactions (comments, authentication, e-commerce, ...)</p>        </div>
+    </article>
+  </div>
+</main> 
+
+  <footer>
+    <div class="region region-footer">
+          <p><small>© All text and images are copyright by Gunther Willems.</small></p>
+    </div>
+  </footer>
+
+</div>
+
+<script src="/main/assets/js/blogannimation.js"></script>
+  </body>
+</html>

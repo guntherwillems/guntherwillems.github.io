@@ -1,0 +1,30 @@
+/*div.region-header {
+  margin-left: 210px;
+}
+
+div.region-reflection-header h1 {
+  margin-left: 210px;
+}
+*/
+
+div.region-header {
+  position: relative;
+}
+
+div.region-header h1 {
+    margin: 0px 0px 0px 160px;
+}
+
+
+div.region-reflection-header {
+  display: block;
+}
+
+div.region-reflection-header h1 {
+  margin-left: 160px;
+}
+
+/* Drupal regions */
+/*div.layout-content {
+  margin-top: 2em;
+}*/

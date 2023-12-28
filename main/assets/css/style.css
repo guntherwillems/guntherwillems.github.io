@@ -1,0 +1,737 @@
+/*
+ Theme by Gunther Willems 122012 2013
+ 2018 updated for usage in Drupal
+*/
+
+/* only ie from normalize.css */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+}
+
+/* body & main container */
+
+body { 
+ margin:0; /* sometimes the first element after body must also have margin=0 ex h1 p */
+ padding: 0;
+ background-color: #F0F0F0;
+
+ /* base font-size of 16px (1em), base line height of 24px on desktop browsers */
+ font-size: 100%;
+ line-height: 1.5em;
+ font-family: 'Labrada', Arial, sans-serif;
+}
+
+div.wrapper {
+ margin: 10px auto; /* if margin is not correct, check first element after wrapper, must have margin=0? ex h1 p */
+ /* if centering with auto doesn't work, check if px is added to values */
+ padding: 0px;
+ max-width: 960px;
+
+ border-style: solid;
+ border-width: 1px;
+ border-radius: 10px;
+ border-color: #d3d4d4;
+
+ background-color: white;
+ background-image: url(../images/background1.jpg);
+ background-position: center top;
+ background-repeat:no-repeat;
+}
+
+/* Drupal regions */
+div.layout-content {
+  clear: both;
+  margin-top: 4em;
+}
+
+/* Cogs */
+
+div.canvaswrapper {
+ position: absolute;
+ width: 158px;
+ height: 219px;
+ margin-left: 3.3%;
+ margin-top: 8px;
+}
+
+div.cogs { /* only for IE not supporting the canvas element */
+ position: absolute;
+ z-index: 0; /* some versions IE don't support -1 + nav z-index 1 */
+ background-image: url("../images/cogs.gif");
+ background-repeat:no-repeat;
+ width: 158px;
+ height: 219px;
+ margin-left: 0px;
+ margin-top: 0px;
+}
+
+/* header */
+
+header {
+ padding: 0;
+ margin: 0;
+ min-height: 210px;
+ width: 100%;
+}
+
+div.region-header {
+  position: absolute;
+  margin-left: 4.9%;
+}
+
+div.region-header h1 {
+  margin: 105px 0 0 0;
+  line-height: 0.7em;
+}
+
+/* menu */
+
+div.region-secondary-menu {
+ max-width: 740px;
+ margin: 0px 4.9% 0px auto;
+ /*text-align: right;*/
+ font-size: 1em;
+ 
+ position: relative; /* needed for z-index to work */
+ z-index: 1;
+}
+
+div.region-primary-menu {
+ max-width: 740px;
+ /*text-align: right;*/
+ font-size: 1.2em;
+ 
+ position: absolute;
+ z-index: 1;
+ top: 250px;
+ /*margin: -18px 4.9% 0px 4.9%;*/
+}
+
+div.region-secondary-menu ul {
+  margin-top: 6px;
+}
+
+/*div.region-primary-menu ul {
+  margin: 0px; padding: 0px;
+}*/
+
+div.region-reflection-primary-menu {
+ max-width: 740px;
+ margin: 5px 4.9% 0px auto;
+ /*text-align: right;*/
+ font-size: 1.2em;
+ 
+  transform: scale(1,-1);
+ -ms-transform: scale(1,-1); /* IE 9 */
+ -webkit-transform: scale(1,-1); /* Safari and Chrome */
+ -o-transform: scale(1,-1); /* Opera */
+ -moz-transform: scale(1,-1); /* Firefox */
+
+ display: none;
+}
+
+div.region-primary-menu ul, div.region-secondary-menu ul, div.region-reflection-primary-menu ul { 
+  text-align: right;
+  list-style-position: inside;
+}
+
+div.region-primary-menu li, div.region-secondary-menu li, div.region-reflection-primary-menu li { 
+ display: inline;
+ list-style-type: none;
+ text-decoration: none;
+}
+
+div.region-primary-menu li a {
+ color: black;
+ text-decoration: none;
+ font-weight: 500;
+}
+
+div.region-secondary-menu li a {
+ color: #D7D7D7;
+ text-decoration: none;
+}
+
+div.region-reflection-primary-menu li a {
+ color: #E7E7E7;
+ text-decoration: none;
+}
+
+ul.menu {  /* reset Drupal value */
+  margin-left: 0px;
+  padding: 0;
+}
+
+div.region-reflection-primary-menu ul.menu a.is-active {
+  color: #E7E7E7;
+}
+
+div.region-reflection-primary-menu li:first-child a {
+ color: #ebd4d5;
+}
+
+div.region-primary-menu li:after, div.region-secondary-menu li:after, div.region-reflection-primary-menu li:after { 
+ content: " | ";
+}
+
+div.region-reflection-primary-menu li:after {
+  color: #E6E7E8;
+}
+
+div.region-secondary-menu li:after {
+  color: #D7D7D7;
+}
+
+div.region-primary-menu li:last-child:after, div.region-secondary-menu li:last-child:after, div.region-reflection-primary-menu li:last-child:after { 
+ content: "";
+}
+
+div.region-primary-menu li a:hover, div.region-secondary-menu li a:hover {
+ border-bottom: 3px solid #C14F4F;
+}
+
+div.region-reflection-primary-menu li a:hover {
+  cursor: default;
+}
+
+div.region-primary-menu > ol, nav > ol, div.region-secondary-menu > ol, nav > ol {
+ margin: 0;
+}
+
+div.region-primary-menu li:first-child a {
+ color: #C14F4F;
+}
+
+div.region-reflection-header{
+    margin-top: 90px;
+    margin-left: 4.9%;
+    display: none;
+  }
+
+header h1, div.region-reflection-header h1 {
+  font-size: 3em;
+  font-style: normal;
+  font-weight: normal;
+  font-family: 'Rouge Script', Arial, sans-serif;
+  -moz-font-feature-settings: "ss02";
+  -ms-font-feature-settings: "ss02";
+  -webkit-font-feature-settings: "ss02";
+  -o-font-feature-settings: "ss02";
+  font-feature-settings: "ss02";
+  /* "ss01", "ss02" / "kern" 1, "liga" 1, "ss01" 1, "ss02" 1 */
+  /*line-height: 0.5em;*/
+  margin: 105px 0 0 0;
+  line-height: 0.7em;
+}
+
+div.region-reflection-header h1 {
+  margin: -9px 0px 40px 180px;   /* position reflection title */
+  /* margin-bottom defines position main content */
+  /*height: 0.62em;  for Safari. Otherwise cuts a part from text */
+  color: #DFDFDF;
+
+  transform: scale(1,-1);
+ -ms-transform: scale(1,-1); /* IE 9 */
+ -webkit-transform: scale(1,-1); /* Safari and Chrome */
+ -o-transform: scale(1,-1); /* Opera */
+ -moz-transform: scale(1,-1); /* Firefox */
+ /*filter: FlipV; very ugly on ie8*/
+}
+
+/* breadcrumb */
+
+
+/* main */
+
+main, div.region-breadcrumb {
+  margin-left: 4.9%;
+  margin-right: 4.9%;
+  line-height: 1.3em;
+  font-family: 'Poppins', Arial, sans-serif;
+  font-size: 1.05em;
+  /*word-spacing: -0.07em;*/
+  /*-webkit-text-stroke: .15pt;*/ /* Google Chrome on Windows too light */
+
+  -moz-font-feature-settings: "ss05", "ss15"; /* "ss05", "ss15" */
+  -ms-font-feature-settings: "ss05", "ss15";
+  -webkit-font-feature-settings: "ss05", "ss15";
+  -o-font-feature-settings: "ss05", "ss15";
+  font-feature-settings: "ss05", "ss15";
+  /* 1 all right, 2 tighter kerning e, 4M 5Ww 6a 7j 8r 9u 10 4 14s? 15l 16t 17y 18atywlr... */
+
+}
+
+main h1 {
+  font-size: 1.8em;
+  font-weight: bold;
+  font-style: normal;
+  font-family: 'Libre Baskerville', georgia, serif;
+  margin: 1.2em 0 1em 0;
+  text-align: left;
+  line-height: 0.9em;
+  /*text-shadow: 1px 1px 0 #DDD, 1px 1px 0 #BBB;*/
+  /*-webkit-text-stroke: 0pt;*/
+  padding: 5px 5px 0px 0px;
+
+  /*-moz-font-feature-settings: "swsh" 1;
+  -ms-font-feature-settings: "swsh" 1;
+  -webkit-font-feature-settings: "swsh" 1;
+  -o-font-feature-settings: "swsh" 1;
+  font-feature-settings: "swsh" 1;*/
+
+  /*word-spacing:-0.15em;*/
+}
+
+main h2 {
+  font-size: 1.3em; /* 1.35 */
+  font-weight: bold;
+  font-style: normal;
+  font-family: 'Libre Baskerville', georgia, serif;
+  margin: 1.5em 0 0.6em 0;
+  padding: 0px;
+  /*-webkit-text-stroke: 0pt;*/
+
+  /*-moz-font-feature-settings: "swsh" 1;
+  -ms-font-feature-settings: "swsh" 1;
+  -webkit-font-feature-settings: "swsh" 1;
+  -o-font-feature-settings: "swsh" 1;
+  font-feature-settings: "swsh" 1;*/
+
+  /*word-spacing:-0.15em;*/
+}
+
+main h3 {
+  font-size: 1.35em;
+  font-weight: bold;
+  font-style: normal;
+  font-family: 'Libre Baskerville', georgia, serif;
+  margin: 1.5em 0 0.6em 0;
+  padding: 0px;
+}
+
+main a {
+  color: #C14F4F;
+}
+
+main a:hover {
+  color: #9e0812;
+}
+
+main a img {border:none;}
+
+main mark {
+  background-color: #fff2f2; /* old value #ffa5a5; */
+}
+
+main textarea {
+ width:94%;
+ height:200px;
+ border:1px solid #ccc;
+ margin:20px;
+ padding:5px;
+ background-color: #E6E7E8;
+ font-family: "Courier New", Courier, monospace;
+font-size: .8em;
+}
+
+main img {
+    max-width: 100%;
+    height: auto;
+  }
+
+main img.center {
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  /*border: solid #E6E7E8;*/
+}
+
+main figure.center {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+main figcaption {
+  font-size: 0.8em;
+}
+
+main aside {
+ border-style: solid;
+ border-width: 1px;
+ border-color: #b0b0b0;
+ margin: 30px 0px;
+ padding: 5px;
+}
+
+main aside h2 {
+  border-style: none;
+  margin-top: 0.2em;
+}
+
+main aside h2 {
+  padding-top: 10px;
+}
+
+main .swash {
+  -moz-font-feature-settings: "swsh" 1;
+  -ms-font-feature-settings: "swsh" 1;
+  -webkit-font-feature-settings: "swsh" 1;
+  -o-font-feature-settings: "swsh" 1;
+  font-feature-settings: "swsh" 1;
+}
+
+/* column definitions */
+main .columns2 {
+  -moz-column-count:2;
+  -webkit-column-count:2;
+  column-count: 2; 
+  column-gap: 20px; 
+  column-rule: 2px solid grey;
+  -moz-column-rule:2px solid grey;
+  -webkit-column-rule:2px solid grey;
+  column-rule:2px solid grey;
+}
+
+main .columns2 ul {
+  margin-left:0px;
+  padding-left: 1em;
+}
+
+main .columns2 li {
+    padding-bottom: 0.5em;
+    column-break-inside: avoid;
+    -moz-column-break-inside:avoid;
+    -webkit-column-break-inside: avoid;
+}
+
+.wide {
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+em.bigger {
+  font-size: 1.2em;
+}
+
+img.symbolimage {
+  height: 1.6em;
+  /*transform: translate(0, 20%);*/
+  vertical-align: text-bottom; /*baseline*/
+}
+
+/* cms logos */
+
+div.imagewithtext {
+  display: flex;
+  align-items: center;
+  margin-top: 0.5em;
+}
+
+div.imagewithtext .left {
+  width: 64px;
+  margin-right: 1em;
+}
+
+div.imagewithtext .leftwide {
+  width: 130px;
+  margin-right: 1em;
+}
+
+div.imagewithtext .right {
+  width: 100%;
+}
+
+/* web colors post */
+
+div.colorslist {
+  display: flex;
+  width: 100%;
+  flex-flow: row wrap;
+}
+
+div.color {
+  width: 8.5em;
+  height: 3em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Drupal vs WordPress */
+
+div.tableblock50 {
+  display: flex;
+  width: 100%;
+  flex-flow: row wrap;
+}
+
+div.tableblock50 div:nth-child(4n+5), div.tableblock50 div:nth-child(4n+6) {  
+  background-color: #F8F8F8;
+}
+
+div.tableblock50 div {
+  /*display: flex;*/
+  width: 50%;
+  border-style: solid;
+  border-width: 1px;
+  margin: 0;
+  margin-top: -1px; /* otherwise has 2px border */
+  margin-left: -1px;
+  box-sizing: border-box; /* padding will not make the div bigger */
+  padding: 0px;
+}
+
+.tableblockheader {
+  font-weight: bold;
+  background-color: #E6E7E8;
+}
+
+div.tableblock50 div p {
+  margin: 0.8em 0.5em;
+}
+
+div.tableblock50 div aside {
+  border-style: none;
+  margin-bottom: 0;
+  margin-top: 0.2em;
+  box-sizing: border-box; /* padding will not make the div bigger */
+  padding: 0px;
+}
+
+div.tableblock50 div aside:before {
+  content: '________';
+  margin: 0.8em 0.5em;
+}
+
+div.tableblock50 hr {
+  width: 3em;
+  margin-top: 2em;
+  /*argin-left: 0.5em;*/
+}
+
+div.tableblock50 ul {
+  margin-top: 0.2em;
+  margin-bottom: 0.5em;
+  margin-left: 1em; 
+  padding-left: 1em;
+}
+
+/* table definition */
+main table { border-color: #bbb; margin: 2em 0; border-collapse: collapse; text-align: left; width: 100%; }
+main table td { padding: 1px 6px; border: 1px solid #ccc; vertical-align: top; word-wrap: break-word }
+main table th,
+main table thead { border: 1px solid #bbb; padding: 2px 5px; background: #E6E7E8; }
+main tr:nth-child(even) { background-color: #F8F8F8; }
+
+main:after {
+ color: #C14F4F;
+ /*content: url('../img/ornament2.png');*/
+ letter-spacing: 5px; /* Use letter-spacing to increase space between dots*/
+ /*margin-left: 15%;*/
+ font-weight: bold;
+
+ display:flex;
+ flex-direction:row;
+ align-items: center;
+ justify-content: center;
+
+ content: ".......................";
+
+}
+
+/* sitemap */
+
+ul.sitemap li a {
+ text-decoration: none;
+}
+
+h2.sitemap a {
+  color: dimgrey;
+  text-decoration: none;
+}
+
+img.middle-right {
+  vertical-align: middle;
+}
+
+/* blog */
+div.views-field-title {
+  margin-top: 2.5em;
+}
+
+div.views-field-title a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.5em;
+  font-weight: bold;
+  font-style: normal;
+  font-family: 'Libre Baskerville', georgia, serif;
+  /*margin: 1.8em 0 0.6em 0;*/
+  padding: 0px;
+}
+
+div.views-field-title a:hover {
+  color: #C14F4F; /*#9e0812;*/
+}
+
+div.views-field-created span {
+  color: grey;
+  font-size: 0.9em;
+  margin-top: -1.1em;
+}
+
+div.views-field-field-short-text div {
+  margin-top: 1em;
+  padding-bottom: 1.5em;
+
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-color: #d3d4d4;
+}
+
+div.views-field-field-short-text a {
+  text-decoration: none;
+  font-style: normal;
+}
+
+div.node__submitted {
+  color: grey;
+  font-size: 0.8em;
+  margin-top: 2em;
+  margin-bottom: 0;
+  filter: grayscale(100%);
+}
+
+li.notpublished a {
+  color: grey;
+}
+
+main div.views-row:last-child div {
+  border-style: unset;
+  border-width: 0px;
+  margin-bottom: 0em;
+}
+
+/* page specific */
+
+/* cluster gallery */
+p.left { clear: left; }
+img.left { margin: 5px 10px 5px 25px; vertical-align: top; float: left; display:inline; }
+img.full { width: 100%; }
+div.halfcenter { margin-left: auto; margin-right: auto; width: 55%; }
+
+/* closed terrarium */
+
+p.imagecollection img { border: 0.1em solid transparant; padding: 0; margin: 0 0.5em 0.2em 0; }
+
+/* footer */
+
+footer p {
+  margin: 10px 4.9%;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  text-align: center;
+}
+
+footer span {
+  border-width: 1px;
+  border-style: solid;
+  margin: 0px 0px 0px 0px;
+}
+
+span.color1 { /* white */
+  background: white;
+  margin-left: 15px;
+}
+
+span.color2 { /* grey */
+  background: #E6E7E8;
+}
+
+span.color3 { /* red */
+  background: #C14F4F;
+}
+
+span.color4 { /* black */
+  background: black;
+}
+
+
+
+/* Desktop */
+
+@media all and (min-width: 42em) {
+
+div.region-header {
+  position: relative;
+}
+
+div.region-header h1 {
+    margin: 0px 0px 0px 180px; /* position title */
+}
+
+  div.region-primary-menu {
+    position: relative; /* needed for z-index to work */
+    z-index: 1;
+    top: 0;
+    margin: -15px 4.9% 0px auto; /* position first long menu */
+    clear: both; /*clear: both; remove float: right from region-secondary-menu, or clear: right; */;
+  }
+
+  div.region-reflection-primary-menu{
+    display: block;
+  }
+
+  div.region-reflection-header {
+    margin-top: 0;
+    display: block;
+  }
+
+  div.region-reflection-header h1 {
+    /*margin-left: 220px;*/ /* position reflection title */
+  }
+
+  main:after {
+   content: "......................................................................";
+  }
+
+
+  /* Drupal regions */
+  div.layout-content {
+    margin-top: 2em;
+  }
+}
+
+.menu--account {
+  min-height: 2.9em;
+}
+
+/*
+.normal-font {
+  font-family: 'Labrada', Arial, sans-serif;
+  font-size: 0.8em;
+}*/

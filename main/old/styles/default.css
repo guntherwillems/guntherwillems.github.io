@@ -1,0 +1,430 @@
+/* ie needs padding: 1px. For this the width of the images must be 1 less (width and height)! */
+/* Changes in large.css from default.css:
+   body,p {  font-size: 110%;
+   div#topMenu{   top: 109px;   font-size: 100%;
+   ul#leftMenu a{   font-size: 80%;
+   div#bottomText{  font-size: 80%;
+   div#topWindow{ height: 127px;
+   ul#navmenu { font-size: 100%;
+   ul#navmenu a{ padding: 0px 5px 5px 5px;
+   div#rightMenu{ top: 113px;
+   ul#leftMenu{ margin: 60px
+   
+   padding: 3px 0px 20px 0px;
+	   *padding: 0px 0px 10px 0px; /* for IE7 */
+	   _padding: 0px 0px 10px 0px; /* for IE5 and IE6 */
+*/
+
+
+html{
+   margin: 0;
+   padding: 0;
+}
+
+body {
+  text-align: center; /* for ie */
+  margin: 5px;
+  padding: 0;
+  background-color: #3e000f; /*2e0912 462d33 4d2e35 1d0209 5d5741 5d4141 424242 3b3232 413a3a*/
+  color: black;
+}
+
+body,p {
+  font-family: Verdana, Arial, Helvetica;  /*cursive, fantasy, monospace, sans-serif, serif*/
+  font-size: 90%;
+}
+
+div#container
+{
+  position: relative;
+  width: 773px;
+  margin-top: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5px;
+  text-align: left;
+  background-color: #3e000f;
+}
+
+div#topWindow{
+  width: 773px;
+  height: 123px; /* all more than 108 is beginning maintext */
+  margin-bottom: 9px;
+  *margin-bottom: 11px; /* for IE7 */
+  _margin-bottom: 11px; /* for IE5 and IE6 */
+  z-index: 5;
+  visibility: visible;
+  padding: 1px;
+  background-repeat: no-repeat;
+  background-image: url(../images/defaultTop1.jpg);
+}
+
+div#topWindow p{
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 220%;
+  font-weight: bolder;
+  color: #7e0305;
+  margin: 20px 0px 0px 160px;
+  font-style: italic;
+}
+
+div#topMenu{
+  position: absolute;
+  z-index: 6;
+  top: 115px;
+  left: 152px;
+  *top: 118px; /* for IE7 */
+  _top: 118px; /* for IE5 and IE6 */
+  /*width:614px;*/
+  /*height: 20px;*/
+  visibility: visible;
+  color: #b7b295;
+  padding: 1px;
+  font-size: 90%;
+}
+
+div#topMenu ul{
+  margin: 0;
+  padding: 0;
+  display: inline;
+}
+
+div#rightMenu{
+  position: absolute;
+  z-index: 7;
+  top: 116px;
+  *top: 118px; /* for IE7 */
+  _top: 118px; /* for IE5 and IE6 */
+  margin-left: 452px;
+  /*width: 614px;*/
+  /*height: 20px;*/
+  padding: 0;
+  right: 0px;
+  text-align: right;
+  display: inline;
+}
+
+div#topMenu li{
+  list-style-type: none;
+  display: inline;
+  margin: 0px 0px 0px 0px;
+  display: inline;
+}
+
+div#topMenu a{
+  color: #b7b295;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0px 6px 2px 5px;
+}
+
+div#topMenu a:hover{
+  text-decoration: none;
+  background-color: #b7b295;
+  color: #66011f;
+}
+
+div#layout1{
+  position: absolute;
+  z-index: 2;
+  background-image: url(../images/FlameAnimation1.gif);
+  left: 29px;
+  top: 37px;
+  width: 94px;
+  height: 161px;
+}
+
+div#leftMenuDiv{
+  position: absolute;
+  z-index: 1;
+  background-image: url(../images/defaultLeft1.jpg);
+  background-repeat: no-repeat;
+  left: 0px;
+  top: 134px;
+  width: 153px;
+  height: 261px;
+  padding: 0px;
+} 
+
+ul#leftMenu{
+  margin: 75px 7px 10px 2px;
+  padding: 0; /* important for firefox and opera */
+  text-align: center;
+}
+
+ul#leftMenu li{
+  margin: 7px 5px 7px 5px;
+  font-weight: bold;
+  list-style-type: none;
+}
+
+ul#leftMenu li:hover{
+  text-decoration: none;
+}
+
+ul#leftMenu a{
+  padding: 1px 0px 2px 0px;
+  display: block;
+  color: #b7b295;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 75%;
+  height: auto;
+  height: 1%; /* for ie, but doesn't work in IE7, put heigth: auto in next definition */
+}
+
+html > body ul#leftMenu a{height: auto;} /* This is not reconized by IE6*/
+
+ul#leftMenu a:hover{
+  text-decoration: none;
+  background-color: #b29978;
+  color: #940307;
+}
+
+div#mainText{
+  z-index:8;
+  margin-left: 0px;
+  width:771px;
+  margin-bottom: 5px;
+  visibility: visible;
+  background-color: #b7b295;
+  background-repeat: no-repeat;
+  background-image: url(../images/maintextbg.jpg);
+  
+  padding: 1px;
+}
+
+div#indent{
+ width:151px;
+ height: 260px;
+ float: left;
+ display:inline;
+ /*background-color: #3e000f;*/
+ margin-right: 25px;
+ margin-left: 0px;
+ padding-left: 0px;
+}
+
+div#mainText p{
+  margin: 20px 20px 10px 25px;
+}
+
+div#mainText ul{
+  margin-right: 20px;
+  margin-left: 30px;  /* firefox */
+  padding-left: 20px;  /* ie */
+  overflow:hidden; /* for bullets after float: left firefox */
+}
+
+div#mainText a:link{
+  text-decoration: underline;
+  color: #990033;
+}
+
+div#mainText a:link:hover{
+  background-color: #9d0306;
+  color: white;
+}
+
+div#mainText a:visited{
+  text-decoration: underline;
+  color: #CC3300;
+}
+
+div#mainText a:visited:hover{
+  background-color: #9d0306;
+  color: white;
+}
+
+div#bottomText{
+  width:771px;
+  height:22px;
+  background-image: url(../images/defaultBottom.jpg);
+  line-height: 19px; /* center vertically */
+  z-index:9;
+  margin: 0;
+  visibility: visible;
+  /*background-color: #C9C6C4;*/
+  font-size: 70%;
+  text-align: center;
+  padding: 1px;
+}
+
+span.copyright {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  }
+
+/********************
+ * Main text layout *
+ ********************/
+
+h1 {
+  margin: 20px 10px 20px 25px;
+  font-size: 110%;
+  font-weight: bold;
+  color: #7e0305;
+}
+
+div#center {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+p.title {
+  font-weight: bold;
+  margin: 10px 10px 10px 0px;
+  border-bottom-style: solid;
+  border-bottom-color: #7e0305;
+  border-width: 2px;
+  overflow:hidden; /* for correct borders after float: left firefox */
+}
+
+p.important{
+  font-weight: bold;
+  margin: 10px 10px 10px 0px;
+}
+
+p.indentleft{
+  margin: 0px 10px 0px 50px;
+  overflow:hidden; /* for correct borders after float: left firefox */
+}
+
+span.attention{
+  font-weight: bold;
+}
+
+span.category{
+  font-weight: bold;
+}
+
+span.new{
+	font-size: 80%;
+	font-weight: bold;
+	background-color: #CC0033;
+	color: #FFFFFF;
+	padding: 1px;
+}
+
+div#mainText ul il{
+  margin-top: 0em;
+  margin-bottom: 0em;
+}
+
+/*div#mainText p{*/
+  /*clear: left;*/ /*no floating element on the left - om aan te geven dat links van het element geen zwevend element mag voorkomen.*/
+/*}*/
+
+img.leftWhite{
+  /*float: left;*/
+	border: solid white;
+	margin: 5px 15px 15px 30px;
+	vertical-align: middle;
+}
+
+img.centeredWhite{
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  border: solid white;
+}
+
+p.spacingEndArticles{
+  line-height: 130px;
+}
+
+textarea.code{
+ width:720px;
+ height:200px;
+ background-color:#fff;
+ border:1px solid #ccc;
+ margin:20px;
+ padding:5px;
+ background-color: #ddd;
+}
+
+/*******************
+ * Menu definition *
+ *******************/
+
+/* First = Horizontal, Secondary = Vertical */
+
+ul#navmenu {
+  margin: 0;
+  padding: 0;
+  list-style: none; /* show no bullets */
+  /*float: left;*/
+  /*width: 100%;*/
+  text-align: left;
+  font-weight: bold;
+  font-size: 90%; /* change top: in ul#navmenu ul */
+ }
+
+ul#navmenu li {
+  display: inline; /* list items must be horizontal */
+  position: relative; /* position menu second level at same height as item selected */
+  float: left; /* position menu second level at same height as item selected */
+ }
+
+ul#navmenu a {
+  float: left; /* to have no space between list items 'ul' */
+  /*width: */
+  padding: 0px 5px 2px 5px; /* space between list items first level */
+  /*background-color: #036;*/ /* color first menu level */
+  color: #b7b295; /* color first menu level */
+  text-decoration: none;
+  /*border-right: 1px solid #fff;*/
+  /*line-height: 20px;*/ /* height menu */
+ }
+
+ul#navmenu li a:hover,
+ul#navmenu li a.iehover /* .iehover is defined by the iemenu.js script for IE6. */
+{
+  background-color: #b7b295; /* color when cursor over, first menu level */
+  color: #66011f; /* color when cursor over, first menu level */
+}
+
+ul#navmenu ul{
+  display: none; /* hide the menu of second level by default */
+  position: absolute;
+  margin: 0;
+  left: 0; /* the second menu must begin at the same height as item above */
+  /*border: 0 none;*/
+  padding: 0; /* needed for firefox, align second menu correctly */
+  width: 100px; /* width must be set for IE6 to show second level vertically. Must be the same as width ul#navmenu ul li a */
+  top: 18px; /* for IE the sub menu must be drawn at the correct height */
+ }
+
+ul#navmenu li:hover ul,
+ul#navmenu li.iehover ul { /* .iehover is defined by the iemenu.js script for IE6. */
+  display: block;
+ }
+
+ul#navmenu ul li a {
+  width: 100px; /* width menu second level, otherwise it is the length of the word */
+  padding: 3px 10px 3px 10px; /* space between list items second level */
+ }
+
+/* Optional: change color first level when cursor goes to second level, like in Windows */
+
+ul#navmenu li:hover a,
+ul#navmenu li.iehover a {
+  background-color: #b7b295; /* color first level if cursor goes to second level. Must be the same as ul#navmenu li a:hover */
+  color: #66011f;
+ }
+
+ul#navmenu li:hover li:hover a,
+ul#navmenu li.iehover li.iehover a {
+  background-color: #b7b295; /* color second menu when cursor over item. Same as ul#navmenu li:hover a */
+  color: #66011f;
+ }
+
+ul#navmenu li:hover li a,
+ul#navmenu li.iehover li a {
+  background-color: #9f9572; /* color second menu when cursor is still on level 1, and second menu is shown */
+  color: #000000;
+ }

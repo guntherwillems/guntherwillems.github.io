@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+ <meta charset="utf-8" />
+ <title>Test debug window</title>
+
+<script>
+ 
+function Debug(dtext)
+ {
+  // If the debug DIV doesn't exist, create it
+  if ( document.getElementById("debug") == null )
+    CreateDebugDiv();
+    
+  try
+   {
+    document.getElementById("debug").innerHTML += "<br/>   " + dtext;
+   }
+  catch(err)
+   {
+    return;
+   }
+ } // Debug
+
+function CreateDebugDiv()
+ {
+  var debugDiv = document.createElement("div");
+  debugDiv.id = "debug";
+
+  document.body.appendChild(debugDiv, document.body.firstChild);
+  debugDiv = document.getElementById("debug");
+ 
+  debugDiv.style.color = "black";
+  debugDiv.style.fontStyle = "italic";
+  debugDiv.style.textAlign = "left";
+  debugDiv.style.borderWidth = "1px";
+  debugDiv.style.borderStyle = "dashed";
+  debugDiv.style.borderRadius = "10px";
+  debugDiv.style.margin = "5px";
+  debugDiv.style.padding = "5px";
+  debugDiv.style.backgroundColor = "#eee";
+  debugDiv.innerHTML = "Debug window";
+ } // CreateDebugDiv
+ 
+ function StartCode()
+ // code started after the whole html page is loaded
+  {
+   Debug( "Text to show in the debug window." );
+   Debug( "More text added to the debug window." );
+  } // StartCode
+
+  // do something after the html page is loaded
+  window.onload = StartCode;
+  
+ </script> 
+
+
+ </head>
+ <body>
+
+ <p>Text on the page</p>
+
+ </body>
+</html>

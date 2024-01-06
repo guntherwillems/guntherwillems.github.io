@@ -13,8 +13,6 @@ div.region-header h1 {
 }
 
 div.canvassquare canvas {
-	padding-left: 0;
-  padding-right: 0;
   margin: -20px auto 0 auto;
   padding: 0;
   display: block;
@@ -22,13 +20,13 @@ div.canvassquare canvas {
 
   /* Drupal regions */
   div.layout-content {
-    margin-top: 0em;
+    margin-top: 0;
   }
 
 div.region-primary-menu {
   position: relative; /* needed for z-index to work */
   z-index: 1;
   top: 0;
-  margin: -25px 4.9% 0px auto; /* position first long menu */
+  margin: -25px 4.9% 0 auto; /* position first long menu */
   clear: both; /*clear: both; remove float: right from region-secondary-menu, or clear: right; */;
 }

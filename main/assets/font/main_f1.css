@@ -1,1 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Libre+Baskerville&family=Rouge+Script&family=Labrada:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Rouge+Script&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Libre+Baskerville&family=Rouge+Script&family=Labrada:wght@400;500&display=swap');*/
+@font-face {
+  font-family:"fertigo-pro";
+  src:url("https://use.typekit.net/af/1ba9bb/00000000000000000000d94b/27/l?subset_id=2&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/1ba9bb/00000000000000000000d94b/27/d?subset_id=2&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/1ba9bb/00000000000000000000d94b/27/a?subset_id=2&fvd=n4&v=3") format("opentype");
+  font-display:auto;font-style:normal;font-weight:400;font-stretch:normal;
+}
+@font-face {
+  font-family:"elena-web-basic";
+  src:url("https://use.typekit.net/af/42f9e5/00000000000000003b9acdee/27/l?subset_id=2&fvd=n7&v=3") format("woff2"),url("https://use.typekit.net/af/42f9e5/00000000000000003b9acdee/27/d?subset_id=2&fvd=n7&v=3") format("woff"),url("https://use.typekit.net/af/42f9e5/00000000000000003b9acdee/27/a?subset_id=2&fvd=n7&v=3") format("opentype");
+  font-display:auto;font-style:normal;font-weight:700;font-stretch:normal;
+}
+
+/*
+Fonts obtained under license
+
+Webfont: Fertigo Pro Regular by exljbris
+URL: http://www.myfonts.com/fonts/exljbris/fertigo-pro/regular/
+     http://typekit.com/eulas/00000000000000000000d94b
+Copyright: Copyright (c) 2008 by Jos Buivenga. All rights reserved.
+
+Webfont: Elena
+URL: https://processtypefoundry.com/fonts/elena/
+     http://typekit.com/eulas/00000000000000003b9acdee
+License: https://processtypefoundry.com/licensing/webfont-license-agreement
+*/

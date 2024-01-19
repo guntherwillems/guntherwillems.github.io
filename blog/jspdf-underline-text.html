@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Key: -->
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Underline text for jsPDF</title>
+
+  <meta name="generator" content="Drupal 8 (https://www.drupal.org)"/>
+  <meta name="author" content="Gunther WILLEMS"/>
+
+
+  <link rel="stylesheet" media="all" href="/main/assets/css/style.css"/>
+  <link rel="stylesheet" media="all" href="/main/assets/font/main_f1.css"/>
+
+</head>
+
+<body>
+
+<div class="wrapper" role="main" id="page">
+  <div class="canvaswrapper">
+    <canvas height="219" id="canvas" width="160">
+      <div class="cogs"></div>
+    </canvas>
+  </div>
+
+
+  <header>
+
+    <div class="region region-secondary-menu">
+      <nav class="block block-menu navigation menu--account" id="block-cogs-account-menu">
+      </nav>
+    </div>
+    <div class="region region-header">
+      <h1 class="page-title">Underline text with jsPdf</h1>
+    </div>
+
+    <div class="region region-primary-menu">
+      <nav>
+        <ul class="menu">
+          <li class="menu-item">
+            <a href="/">Home</a>
+          </li>
+          <li class="menu-item">
+            <a href="/blog" title="Blog">Blog</a>
+          </li>
+          <li class="menu-item menu-item--active-trail">
+            <a href="/about" title="About this site">About</a>
+          </li>
+          <li class="menu-item">
+            <a href="/sitemap" title="Sitemap">Sitemap</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="region region-reflection-primary-menu">
+      <nav>
+        <ul class="menu">
+          <li class="menu-item">
+            <a href="/">Home</a>
+          </li>
+          <li class="menu-item">
+            <a href="/blog" title="Blog">Blog</a>
+          </li>
+          <li class="menu-item menu-item--active-trail">
+            <a href="/about" title="About this site">About</a>
+          </li>
+          <li class="menu-item">
+            <a href="/sitemap" title="Sitemap">Sitemap</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="region region-reflection-header">
+      <h1>Underline text with jsPdf</h1>
+    </div>
+
+  </header>
+  <main>
+    <div class="layout-content">
+      <div class="node__submitted">
+        <p>&#128197; 27-03-2022 &#8226; &Delta; 06-01-2024</p>
+      </div>
+      <article>
+        <div
+          class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item">
+          <p>At the time of writing the <a href="https://parall.ax/products/jspdf">jsPDF</a> JavaScript library didn't
+            have an underline option for text. This is the code I wrote.</p>
+          <p>For my project the underline distance of 0.3 always worked. I set it as an optional parameter with 0.3 as default value.</p>
+          <p>The two functions: underline & underlineCenter:</p>
+          <label>
+<textarea>
+/**
+* Write the text and add underline
+* @param {number} x - Horizontal position. Against left edge of the page.
+* @param {number} y - Vertical position. Against upper edge of the page.
+* @param {string} text
+* @param {object} doc - The jspdf document reference
+* @param {number} dist - Underline distance under the text
+*/
+function underline (text, x, y, doc, dist = 0.3) {
+/* const textHeight = doc.getTextDimensions(text).h; */
+const textWidth = doc.getTextWidth(text);
+doc.text(text, x, y);
+doc.setLineWidth(0.2);
+doc.setDrawColor(0);
+doc.line(x, y + dist, x + textWidth, y + dist);
+}
+
+// -----------------------------------------------------------------------------
+
+/**
+* Write the text and add underline. Center the text around the coordinates
+* @param {number} x - Horizontal position. Against left edge of the page.
+* @param {number} y - Vertical position. Against upper edge of the page.
+* @param {string} text
+* @param {object} doc - The jspdf document reference
+* @param {number} dist - Underline distance under the text
+*/
+function underlineCenter (text, x, y, doc, dist = 0.3) {
+/* const textHeight = doc.getTextDimensions(text).h; */
+const textWidth = doc.getTextWidth(text);
+doc.text(text, x, y, 'center');
+doc.setLineWidth(0.2);
+doc.setDrawColor(0);
+doc.line(x - textWidth / 2, y + dist, x + textWidth / 2, y + dist);
+}
+</textarea>
+          </label>
+
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <footer>
+    <div class="region region-footer">
+      <p><small>Website by Gunther Willems</small></p>
+    </div>
+  </footer>
+
+</div>
+
+<script src="/main/assets/js/blogannimation.js"></script>
+</body>
+</html>

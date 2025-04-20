@@ -1,21 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- Key:201905211756 -->
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Creating a dynamic debug window</title>
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="issued" content="2011-07-02"/>
+  <meta name="description" content="With this Javascript code you can dynamically create a debug window in an HTML page and add text to it."/>
+  <title>Creating a dynamic debug window</title>
 
-    <meta name="generator" content="Drupal 8 (https://www.drupal.org)" />
-    <meta name="author" content="Gunther WILLEMS" />
+  <meta name="author" content="Gunther WILLEMS"/>
 
+  <link rel="stylesheet" media="all" href="/main/assets/css/style.css"/>
+  <link rel="stylesheet" media="all" href="/main/assets/font/main_f1.css"/>
 
-    <link rel="stylesheet" media="all" href="/main/assets/css/style.css" />
-<link rel="stylesheet" media="all" href="/main/assets/font/main_f1.css" />    
-           
-  </head>
+</head>
 
-  <body>
+<body>
 
 <div class="wrapper" role="main" id="page">
   <div class="canvaswrapper">
@@ -27,16 +26,16 @@
 
   <header>
 
-        <div class="region region-secondary-menu">
-      <nav class="block block-menu navigation menu--account" id="block-cogs-account-menu">
+    <div class="region-secondary-menu">
+      <nav class="menu--account"">
       </nav>
     </div>
-    <div class="region region-header">
-        <h1 class="page-title">Creating a dynamic debug window</h1>
+    <div class="region-header">
+      <h1 class="page-title">Creating a dynamic debug window</h1>
     </div>
 
-    <div class="region region-primary-menu">
-            <nav>
+    <div class="region-primary-menu">
+      <nav>
         <ul class="menu">
           <li class="menu-item">
             <a href="/">Home</a>
@@ -44,17 +43,18 @@
           <li class="menu-item">
             <a href="/blog" title="Blog">Blog</a>
           </li>
-          <li class="menu-item menu-item--active-trail">
+          <li class="menu-item">
             <a href="/about" title="About this site">About</a>
           </li>
           <li class="menu-item">
             <a href="/sitemap" title="Sitemap">Sitemap</a>
           </li>
         </ul>
-      </nav>    </div>
+      </nav>
+    </div>
 
-    <div class="region region-reflection-primary-menu">
-            <nav>
+    <div class="region-reflection-primary-menu">
+      <nav>
         <ul class="menu">
           <li class="menu-item">
             <a href="/">Home</a>
@@ -62,32 +62,35 @@
           <li class="menu-item">
             <a href="/blog" title="Blog">Blog</a>
           </li>
-          <li class="menu-item menu-item--active-trail">
+          <li class="menu-item">
             <a href="/about" title="About this site">About</a>
           </li>
           <li class="menu-item">
             <a href="/sitemap" title="Sitemap">Sitemap</a>
           </li>
         </ul>
-      </nav>    </div>
+      </nav>
+    </div>
 
-    <div class="region region-reflection-header">
-        <h1>Creating a dynamic debug window</h1>
-      </div>
+    <div class="region-reflection-header">
+      <h1>Creating a dynamic debug window</h1>
+    </div>
 
   </header>
-<main>
-  <div class="layout-content">
-    <article>
-            <div class="node__submitted">
-        <p>&#128197; 02-07-2011 &#8226; &Delta; 21-05-2019</p>
-      </div>
-            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item">
-<p>With this Javascript code you can dynamically create a debug window in an HTML page and add text to it.</p>
+  <main>
+    <div class="layout-content">
+      <article>
+        <div class="node__submitted">
+          <p>&#128197; 02-07-2011 &#8226; &Delta; 21-05-2019</p>
+        </div>
+        <div
+          class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item">
+          <p>With this Javascript code you can dynamically create a debug window in an HTML page and add text to it.</p>
 
-<p class="important">How to use the code:<textarea style="height:30px;">Debug( "text message to show in the debug window" );</textarea></p>
+          <p class="important">How to use the code:<textarea style="height:30px;">Debug( "text message to show in the debug window" );</textarea>
+          </p>
 
-<p class="important">This function adds text to the debug window:<textarea class="code">function Debug(dtext)
+          <p class="important">This function adds text to the debug window:<textarea class="code">function Debug(dtext)
  {
   // If the debug DIV doesn't exist, create it
   if ( document.getElementById("debug") == null )
@@ -104,7 +107,7 @@
  } // Debug
   </textarea></p>
 
-<p class="important">This function creates the debug window:<textarea class="code">function CreateDebugDiv()
+          <p class="important">This function creates the debug window:<textarea class="code">function CreateDebugDiv()
  {
   var debugDiv = document.createElement("div");
   debugDiv.id = "debug";
@@ -125,20 +128,20 @@
  } // CreateDebugDiv
   </textarea></p>
 
-<p>A working example: <a href="/main/blog/TestDebugWindow.html">link</a></p>
+          <p>A working example: <a href="/main/blog/TestDebugWindow.html">link</a></p>
         </div>
-    </article>
-  </div>
-</main> 
+      </article>
+    </div>
+  </main>
 
   <footer>
-    <div class="region region-footer">
-          <p><small>Website by Gunther Willems</small></p>
+    <div class="region-footer">
+      <p><small>Website by Gunther Willems</small></p>
     </div>
   </footer>
 
 </div>
 
 <script src="/main/assets/js/blogannimation.js"></script>
-  </body>
+</body>
 </html>

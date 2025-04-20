@@ -1,21 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- Key:201908211054 -->
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Jamstack explained</title>
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="issued" content="2019-07-20"/>
+  <meta name="description" content="A summary explaining the JAMstack architecture."/>
+  <title>Jamstack explained</title>
 
-    <meta name="generator" content="Drupal 8 (https://www.drupal.org)" />
-    <meta name="author" content="Gunther WILLEMS" />
+  <meta name="author" content="Gunther WILLEMS"/>
 
+  <link rel="stylesheet" media="all" href="/main/assets/css/style.css"/>
+  <link rel="stylesheet" media="all" href="/main/assets/font/main_f1.css"/>
 
-    <link rel="stylesheet" media="all" href="/main/assets/css/style.css" />
-<link rel="stylesheet" media="all" href="/main/assets/font/main_f1.css" />    
-              
-  </head>
+</head>
 
-  <body>
+<body>
 
 <div class="wrapper" role="main" id="page">
   <div class="canvaswrapper">
@@ -27,16 +26,16 @@
 
   <header>
 
-        <div class="region region-secondary-menu">
-      <nav class="block block-menu navigation menu--account" id="block-cogs-account-menu">
+    <div class="region-secondary-menu">
+      <nav class="menu--account"">
       </nav>
     </div>
-    <div class="region region-header">
-        <h1 class="page-title">Jamstack explained</h1>
+    <div class="region-header">
+      <h1 class="page-title">Jamstack explained</h1>
     </div>
 
-    <div class="region region-primary-menu">
-            <nav>
+    <div class="region-primary-menu">
+      <nav>
         <ul class="menu">
           <li class="menu-item">
             <a href="/">Home</a>
@@ -44,17 +43,18 @@
           <li class="menu-item">
             <a href="/blog" title="Blog">Blog</a>
           </li>
-          <li class="menu-item menu-item--active-trail">
+          <li class="menu-item">
             <a href="/about" title="About this site">About</a>
           </li>
           <li class="menu-item">
             <a href="/sitemap" title="Sitemap">Sitemap</a>
           </li>
         </ul>
-      </nav>    </div>
+      </nav>
+    </div>
 
-    <div class="region region-reflection-primary-menu">
-            <nav>
+    <div class="region-reflection-primary-menu">
+      <nav>
         <ul class="menu">
           <li class="menu-item">
             <a href="/">Home</a>
@@ -62,134 +62,142 @@
           <li class="menu-item">
             <a href="/blog" title="Blog">Blog</a>
           </li>
-          <li class="menu-item menu-item--active-trail">
+          <li class="menu-item">
             <a href="/about" title="About this site">About</a>
           </li>
           <li class="menu-item">
             <a href="/sitemap" title="Sitemap">Sitemap</a>
           </li>
         </ul>
-      </nav>    </div>
+      </nav>
+    </div>
 
-    <div class="region region-reflection-header">
-        <h1>Jamstack explained</h1>
-      </div>
+    <div class="region-reflection-header">
+      <h1>Jamstack explained</h1>
+    </div>
 
   </header>
-<main>
-  <div class="layout-content">
-    <div class="node__submitted">
-    <p>&#128197; 20-07-2019 &#8226; &Delta; 21-08-2019</p>
-  </div>
+  <main>
+    <div class="layout-content">
+      <div class="node__submitted">
+        <p>&#128197; 20-07-2019 &#8226; &Delta; 21-08-2019</p>
+      </div>
       <article>
-      <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item">
-<h2>Schema</h2>
+        <div
+          class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item">
+          <h2>Schema</h2>
 
-<p><img alt="JAMstack schema" class="full" onclick="window.open(this.src, '_self')" src="/main/images/blog/jamstack-schema.png" /></p>
+          <p><img alt="JAMstack schema" class="full" onclick="window.open(this.src, '_self')"
+                  src="/main/images/blog/jamstack-schema.png"/></p>
 
-<h2>JAMstack</h2>
+          <h2>JAMstack</h2>
 
-<p><a href="https://jamstack.org/">JAMstack</a> is a concept / architecture for a web stack based on client-side <strong>J</strong>avaScript, <strong>A</strong>PIs and pre-rendered <strong>M</strong>arkup.</p>
+          <p><a href="https://jamstack.org/">JAMstack</a> is a concept / architecture for a web stack based on
+            client-side <strong>J</strong>avaScript, <strong>A</strong>PIs and pre-rendered <strong>M</strong>arkup.</p>
 
-<p>The core of this concept is the pre-rendered static web site in HTML.<br />
-In combination with client-side technologies like:</p>
+          <p>The core of this concept is the pre-rendered static web site in HTML.<br/>
+            In combination with client-side technologies like:</p>
 
-<ul>
-	<li>dynamic content powered by JavaScript</li>
-	<li>client-side APIs</li>
-	<li>consulting server-side APIs (RESTful API CMS / web services)</li>
-</ul>
+          <ul>
+            <li>dynamic content powered by JavaScript</li>
+            <li>client-side APIs</li>
+            <li>consulting server-side APIs (RESTful API CMS / web services)</li>
+          </ul>
 
-<p>Mostly we can divide the web stack in 3 parts:</p>
+          <p>Mostly we can divide the web stack in 3 parts:</p>
 
-<ol>
-	<li>Content is stored in
-	<ul>
-		<li>a headless or decoupled CMS</li>
-		<li>markdown with metadata in front matter</li>
-		<li>markup with metadata (ex. HTML with metadata in comments or meta property attributes)</li>
-		<li>JSON data files</li>
-		<li>...</li>
-	</ul>
-	</li>
-	<li>A static site generator (SSG) to generate the static HTML pages.</li>
-	<li>The static generated HTML pages (frontend web site)</li>
-</ol>
+          <ol>
+            <li>Content is stored in
+              <ul>
+                <li>a headless or decoupled CMS</li>
+                <li>markdown with metadata in front matter</li>
+                <li>markup with metadata (ex. HTML with metadata in comments or meta property attributes)</li>
+                <li>JSON data files</li>
+                <li>...</li>
+              </ul>
+            </li>
+            <li>A static site generator (SSG) to generate the static HTML pages.</li>
+            <li>The static generated HTML pages (frontend web site)</li>
+          </ol>
 
-<h2>Headless vs decoupled CMS</h2>
+          <h2>Headless vs decoupled CMS</h2>
 
-<p>A <strong>headless CMS</strong> only provides content/data with a RESTfull API. No content is pre-rendered<br />
-A <strong>decoupled CMS</strong> is a headless CMS with the addition of pre-rendering static pages, and on the backend CMS: templates, editing interface, authentication, ...</p>
+          <p>A <strong>headless CMS</strong> only provides content/data with a RESTfull API. No content is
+            pre-rendered<br/>
+            A <strong>decoupled CMS</strong> is a headless CMS with the addition of pre-rendering static pages, and on
+            the backend CMS: templates, editing interface, authentication, ...</p>
 
-<h2>Static site generators</h2>
+          <h2>Static site generators</h2>
 
-<p>A lot of static site generators (SSG) exist to simplify the task to generate static HTML pages.</p>
+          <p>A lot of static site generators (SSG) exist to simplify the task to generate static HTML pages.</p>
 
-<ul>
-	<li><a href="https://jekyllrb.com/">Jekyll</a> (ruby, supported by GitHub)</li>
-	<li><a href="https://www.gatsbyjs.org/">Gatsby.js</a> (Node.js JavaScript, React, GraphQL)</li>
-	<li><a href="https://www.11ty.io/">Eleventy</a> (Node.js JavaScript)</li>
-	<li><a href="https://gohugo.io/">Hugo</a> (golang)</li>
-	<li>...</li>
-</ul>
+          <ul>
+            <li><a href="https://jekyllrb.com/">Jekyll</a> (ruby, supported by GitHub)</li>
+            <li><a href="https://www.gatsbyjs.org/">Gatsby.js</a> (Node.js JavaScript, React, GraphQL)</li>
+            <li><a href="https://www.11ty.io/">Eleventy</a> (Node.js JavaScript)</li>
+            <li><a href="https://gohugo.io/">Hugo</a> (golang)</li>
+            <li>...</li>
+          </ul>
 
-<p><br />
-Or write it in the programming language you already use</p>
+          <p><br/>
+            Or write it in the programming language you already use</p>
 
-<ul>
-	<li>PHP</li>
-	<li>JavaScript</li>
-	<li>ASP</li>
-	<li>...</li>
-</ul>
+          <ul>
+            <li>PHP</li>
+            <li>JavaScript</li>
+            <li>ASP</li>
+            <li>...</li>
+          </ul>
 
-<p>Using a template engine</p>
+          <p>Using a template engine</p>
 
-<ul>
-	<li><a href="https://twig.symfony.com/">Twig</a> (PHP)</li>
-	<li><a href="https://shopify.github.io/liquid/">Liquid</a> (Ruby)</li>
-	<li><a href="https://ejs.co/">EJS</a> (JavaScript)</li>
-	<li><a href="https://handlebarsjs.com/">Handlebars.js</a></li>
-	<li>...</li>
-</ul>
+          <ul>
+            <li><a href="https://twig.symfony.com/">Twig</a> (PHP)</li>
+            <li><a href="https://shopify.github.io/liquid/">Liquid</a> (Ruby)</li>
+            <li><a href="https://ejs.co/">EJS</a> (JavaScript)</li>
+            <li><a href="https://handlebarsjs.com/">Handlebars.js</a></li>
+            <li>...</li>
+          </ul>
 
-<h2>Limitations / advantages</h2>
+          <h2>Limitations / advantages</h2>
 
-<p>JAMstack eliminates limitations from a traditional coupled (monolithic) CMS system</p>
+          <p>JAMstack eliminates limitations from a traditional coupled (monolithic) CMS system</p>
 
-<p>Advantage:</p>
+          <p>Advantage:</p>
 
-<ul>
-	<li>performance</li>
-	<li>security</li>
-	<li>reduced complexity</li>
-	<li>no critical updates</li>
-	<li>web site not going offline / maintenance</li>
-	<li>low cost scaling</li>
-	<li>simple caching</li>
-	<li>removes lots of points of failures</li>
-	<li>can serve more connections</li>
-	<li>usable in CDN (content delivery network)</li>
-</ul>
+          <ul>
+            <li>performance</li>
+            <li>security</li>
+            <li>reduced complexity</li>
+            <li>no critical updates</li>
+            <li>web site not going offline / maintenance</li>
+            <li>low cost scaling</li>
+            <li>simple caching</li>
+            <li>removes lots of points of failures</li>
+            <li>can serve more connections</li>
+            <li>usable in CDN (content delivery network)</li>
+          </ul>
 
-<p>Disadvantage:</p>
+          <p>Disadvantage:</p>
 
-<ul>
-	<li>Some functionalities provided by a CMS out of the box or with plugins must be programmed or by using an external API provider that most likely isn't free.</li>
-</ul>
+          <ul>
+            <li>Some functionalities provided by a CMS out of the box or with plugins must be programmed or by using an
+              external API provider that most likely isn't free.
+            </li>
+          </ul>
         </div>
-    </article>
-  </div>
-</main> 
+      </article>
+    </div>
+  </main>
 
   <footer>
-    <div class="region region-footer">
-          <p><small>Website by Gunther Willems</small></p>
+    <div class="region-footer">
+      <p><small>Website by Gunther Willems</small></p>
     </div>
   </footer>
 
 </div>
 
 <script src="/main/assets/js/blogannimation.js"></script>
-  </body>
+</body>
 </html>

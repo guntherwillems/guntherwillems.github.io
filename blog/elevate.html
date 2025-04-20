@@ -1,21 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- Key:201905211757 -->
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Elevate a program from command-line</title>
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="issued" content="2012-10-06"/>
+  <meta name="description"  content="How can you start a program and elevate it as administrator from command-line without a confirmation by the user with partially disabling UAC (User Account Control) in Windows 8 / 10? In this article I explain it and give a self-written program with the source code."/>
+  <title>Elevate a program from command-line</title>
 
-    <meta name="generator" content="Drupal 8 (https://www.drupal.org)" />
-    <meta name="author" content="Gunther WILLEMS" />
+  <meta name="author" content="Gunther WILLEMS"/>
 
+  <link rel="stylesheet" media="all" href="/main/assets/css/style.css"/>
+  <link rel="stylesheet" media="all" href="/main/assets/font/main_f1.css"/>
 
-    <link rel="stylesheet" media="all" href="/main/assets/css/style.css" />
-<link rel="stylesheet" media="all" href="/main/assets/font/main_f1.css" />    
-           
-  </head>
+</head>
 
-  <body>
+<body>
 
 <div class="wrapper" role="main" id="page">
   <div class="canvaswrapper">
@@ -27,16 +26,16 @@
 
   <header>
 
-        <div class="region region-secondary-menu">
-      <nav class="block block-menu navigation menu--account" id="block-cogs-account-menu">
+    <div class="region-secondary-menu">
+      <nav class="menu--account"">
       </nav>
     </div>
-    <div class="region region-header">
-        <h1 class="page-title">Elevate a program from command-line</h1>
+    <div class="region-header">
+      <h1 class="page-title">Elevate a program from command-line</h1>
     </div>
 
-    <div class="region region-primary-menu">
-            <nav>
+    <div class="region-primary-menu">
+      <nav>
         <ul class="menu">
           <li class="menu-item">
             <a href="/">Home</a>
@@ -44,17 +43,18 @@
           <li class="menu-item">
             <a href="/blog" title="Blog">Blog</a>
           </li>
-          <li class="menu-item menu-item--active-trail">
+          <li class="menu-item">
             <a href="/about" title="About this site">About</a>
           </li>
           <li class="menu-item">
             <a href="/sitemap" title="Sitemap">Sitemap</a>
           </li>
         </ul>
-      </nav>    </div>
+      </nav>
+    </div>
 
-    <div class="region region-reflection-primary-menu">
-            <nav>
+    <div class="region-reflection-primary-menu">
+      <nav>
         <ul class="menu">
           <li class="menu-item">
             <a href="/">Home</a>
@@ -62,108 +62,134 @@
           <li class="menu-item">
             <a href="/blog" title="Blog">Blog</a>
           </li>
-          <li class="menu-item menu-item--active-trail">
+          <li class="menu-item">
             <a href="/about" title="About this site">About</a>
           </li>
           <li class="menu-item">
             <a href="/sitemap" title="Sitemap">Sitemap</a>
           </li>
         </ul>
-      </nav>    </div>
+      </nav>
+    </div>
 
-    <div class="region region-reflection-header">
-        <h1>Elevate a program from command-line</h1>
-      </div>
+    <div class="region-reflection-header">
+      <h1>Elevate a program from command-line</h1>
+    </div>
 
   </header>
-<main>
-  <div class="layout-content">
-    <article>
-            <div class="node__submitted">
-        <p>&#128197; 06-10-2012 &#8226; &Delta; 21-05-2019</p>
-      </div>
-            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item">
-<p>How can you start a program and elevate as administrator without a confirmation by the user. For example, on a corporate network for starting an unattended installation without using the Active Directory Group Policy.</p>
-
-<p>In Windows 8, disabling the UAC (User Account Control) completely through the Group Policy / Local Security Policy, Windows Store applications (old name Metro applications) will stop working with this error:</p>
-
-<p>"This app can't open. [application name] can't open while Account Control is turned off. Turn on User Account Control"</p>
-
-<p>Disabling UAC via Control Panel will only disable it partially.</p>
-
-<h2>Why all the old methods don't work anymore</h2>
-
-<p>From Windows Vista and later a user, member of the administrators group, gets 2 tokens at login : a user token and an admin token. By default the user token is used. Because of this when using a DOS command like runas.exe for starting a program as another user (ex. an administrator), the user token is used and not the admin token.</p>
-
-<h2>Solutions</h2>
-
-<p>One solution is to use&nbsp;the 'Elevation PowerToys for Windows Vista'. It certainly works in Windows 7 and Windows 8. Inside these PowerToys you can find 2 files that work together and can elevate a program if the active user has an admin token:<br />
-elevate.cmd and elevate.vbs</p>
-
-<p>Original location: <a href="http://technet.microsoft.com/en-us/magazine/2008.06.elevation.aspx">http://technet.microsoft.com/en-us/magazine/2008.06.elevation.aspx</a></p>
-
-<p>This method works, but I find it a bit heavy. A batch file and a VBScript engine are launched each time. I developed a solution only using a c# program compiled with .NET Framework 4.0</p>
-
-<p>The only thing that activates the magic (elevate) is the runas parameter in this line:<br />
-objShell.ShellExecute strApplication, strArguments, "", "runas"</p>
-
-<p>In the .NET Framework we can accomplish this with the ProcessStartInfo.Verb property from the System.Diagnostics namespace:<br />
-ProcessStartInfo.Verb = "runas";</p>
-
-<h2>Downloads</h2>
-
-<p>My complete source code can be found <a href="/main/download/blog/elevate.cs">here</a><br />
-The compiled program elevate.exe can be found <a href="/main/download/blog/elevate.zip">here</a></p>
-
-<h2>Description program</h2>
-
-<p>Syntax: elevate [program] [argument 1] [argument 2] ...</p>
-
-<p>Example: elevate notepad c:\windows\win.ini</p>
-
-<p>Elevate.exe starts a program using the Admin token of the current user if the user is in the administrators group for Windows &gt;= Vista.</p>
-
-<p>If UAC is enabled, the user will need to confirm the action. If UAC is partially disabled, the user will not need to confirm the action.</p>
-
-<p>You need .NET Framework 4.0 or later to use my compiled version.</p>
-
-<h2>Disclaimer</h2>
-
-<p>This software is provided "as is", with absolutely no warranty expressed or implied. Any use is at your own risk. Permission to use or copy this software for any purpose is hereby granted without fee. Permission to modify the code and to distribute modified code is granted.</p>
-
-<h2>Locations</h2>
-
-<p><strong>UAC location in Local Security Policy:</strong><br />
-secpol.msc, Local Policies / Security Options/ All entries beginning with: User Account Control</p>
-
-<p><strong>UAC location in Group Policy:</strong><br />
-Computer Configuration / Windows Settings / Security Settings / Local Policies / Security Options/ All entries beginning with: User Account Control</p>
-
-<p><strong>UAC location in the normal Control Panel:</strong><br />
-With view by 'small icons' active: Action Center / Change User Account Control settings Move the slider all the way down 'Never notify' With View by Category active: System and Security / Action Center / Change User Account Control settings</p>
-
-<h2>Other possible solutions</h2>
-
-<ul>
-	<li>Setting up a scheduled task with "Run with highest privileges" checked<br />
-	SCHTASKS.EXE /RUN /TN "Name of Task"</li>
-	<li>Create a service.&nbsp;But&nbsp;a service runs in 'Session 0 Isolation' mode with its own restrictions.</li>
-	<li>Use dangerous tools like PSEXEC (http://technet.microsoft.com/en-us/sysinternals/bb897553). An attacker can easily use this for doing dangerous things.</li>
-	<li>Compile a program with a manifest asking for elevation</li>
-</ul>
+  <main>
+    <div class="layout-content">
+      <article>
+        <div class="node__submitted">
+          <p>&#128197; 06-10-2012 &#8226; &Delta; 21-05-2019</p>
         </div>
-    </article>
-  </div>
-</main> 
+        <div
+          class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item">
+          <p>How can you start a program and elevate as administrator without a confirmation by the user. For example,
+            on a corporate network for starting an unattended installation without using the Active Directory Group
+            Policy.</p>
+
+          <p>In Windows 8, disabling the UAC (User Account Control) completely through the Group Policy / Local Security
+            Policy, Windows Store applications (old name Metro applications) will stop working with this error:</p>
+
+          <p>"This app can't open. [application name] can't open while Account Control is turned off. Turn on User
+            Account Control"</p>
+
+          <p>Disabling UAC via Control Panel will only disable it partially.</p>
+
+          <h2>Why all the old methods don't work anymore</h2>
+
+          <p>From Windows Vista and later a user, member of the administrators group, gets 2 tokens at login : a user
+            token and an admin token. By default the user token is used. Because of this when using a DOS command like
+            runas.exe for starting a program as another user (ex. an administrator), the user token is used and not the
+            admin token.</p>
+
+          <h2>Solutions</h2>
+
+          <p>One solution is to use&nbsp;the 'Elevation PowerToys for Windows Vista'. It certainly works in Windows 7
+            and Windows 8. Inside these PowerToys you can find 2 files that work together and can elevate a program if
+            the active user has an admin token:<br/>
+            elevate.cmd and elevate.vbs</p>
+
+          <p>Original location: <a href="http://technet.microsoft.com/en-us/magazine/2008.06.elevation.aspx">http://technet.microsoft.com/en-us/magazine/2008.06.elevation.aspx</a>
+          </p>
+
+          <p>This method works, but I find it a bit heavy. A batch file and a VBScript engine are launched each time. I
+            developed a solution only using a c# program compiled with .NET Framework 4.0</p>
+
+          <p>The only thing that activates the magic (elevate) is the runas parameter in this line:<br/>
+            objShell.ShellExecute strApplication, strArguments, "", "runas"</p>
+
+          <p>In the .NET Framework we can accomplish this with the ProcessStartInfo.Verb property from the
+            System.Diagnostics namespace:<br/>
+            ProcessStartInfo.Verb = "runas";</p>
+
+          <h2>Downloads</h2>
+
+          <p>My complete source code can be found <a href="/main/download/blog/elevate.cs">here</a><br/>
+            The compiled program elevate.exe can be found <a href="/main/download/blog/elevate.zip">here</a></p>
+
+          <h2>Description program</h2>
+
+          <p>Syntax: elevate [program] [argument 1] [argument 2] ...</p>
+
+          <p>Example: elevate notepad c:\windows\win.ini</p>
+
+          <p>Elevate.exe starts a program using the Admin token of the current user if the user is in the administrators
+            group for Windows &gt;= Vista.</p>
+
+          <p>If UAC is enabled, the user will need to confirm the action. If UAC is partially disabled, the user will
+            not need to confirm the action.</p>
+
+          <p>You need .NET Framework 4.0 or later to use my compiled version.</p>
+
+          <h2>Disclaimer</h2>
+
+          <p>This software is provided "as is", with absolutely no warranty expressed or implied. Any use is at your own
+            risk. Permission to use or copy this software for any purpose is hereby granted without fee. Permission to
+            modify the code and to distribute modified code is granted.</p>
+
+          <h2>Locations</h2>
+
+          <p><strong>UAC location in Local Security Policy:</strong><br/>
+            secpol.msc, Local Policies / Security Options/ All entries beginning with: User Account Control</p>
+
+          <p><strong>UAC location in Group Policy:</strong><br/>
+            Computer Configuration / Windows Settings / Security Settings / Local Policies / Security Options/ All
+            entries beginning with: User Account Control</p>
+
+          <p><strong>UAC location in the normal Control Panel:</strong><br/>
+            With view by 'small icons' active: Action Center / Change User Account Control settings Move the slider all
+            the way down 'Never notify' With View by Category active: System and Security / Action Center / Change User
+            Account Control settings</p>
+
+          <h2>Other possible solutions</h2>
+
+          <ul>
+            <li>Setting up a scheduled task with "Run with highest privileges" checked<br/>
+              SCHTASKS.EXE /RUN /TN "Name of Task"
+            </li>
+            <li>Create a service.&nbsp;But&nbsp;a service runs in 'Session 0 Isolation' mode with its own
+              restrictions.
+            </li>
+            <li>Use dangerous tools like PSEXEC (http://technet.microsoft.com/en-us/sysinternals/bb897553). An attacker
+              can easily use this for doing dangerous things.
+            </li>
+            <li>Compile a program with a manifest asking for elevation</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </main>
 
   <footer>
-    <div class="region region-footer">
-          <p><small>Website by Gunther Willems</small></p>
+    <div class="region-footer">
+      <p><small>Website by Gunther Willems</small></p>
     </div>
   </footer>
 
 </div>
 
 <script src="/main/assets/js/blogannimation.js"></script>
-  </body>
+</body>
 </html>

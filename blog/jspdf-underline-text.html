@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- Key: -->
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="issued" content="2024-01-06"/>
+  <meta name="description" content="JavaScript code to underline text with the library jsPDF."/>
   <title>Underline text for jsPDF</title>
 
-  <meta name="generator" content="Drupal 8 (https://www.drupal.org)"/>
   <meta name="author" content="Gunther WILLEMS"/>
-
 
   <link rel="stylesheet" media="all" href="/main/assets/css/style.css"/>
   <link rel="stylesheet" media="all" href="/main/assets/font/main_f1.css"/>
@@ -27,15 +26,15 @@
 
   <header>
 
-    <div class="region region-secondary-menu">
-      <nav class="block block-menu navigation menu--account" id="block-cogs-account-menu">
+    <div class="region-secondary-menu">
+      <nav class="menu--account"">
       </nav>
     </div>
-    <div class="region region-header">
+    <div class="region-header">
       <h1 class="page-title">Underline text with jsPdf</h1>
     </div>
 
-    <div class="region region-primary-menu">
+    <div class="region-primary-menu">
       <nav>
         <ul class="menu">
           <li class="menu-item">
@@ -44,7 +43,7 @@
           <li class="menu-item">
             <a href="/blog" title="Blog">Blog</a>
           </li>
-          <li class="menu-item menu-item--active-trail">
+          <li class="menu-item">
             <a href="/about" title="About this site">About</a>
           </li>
           <li class="menu-item">
@@ -54,7 +53,7 @@
       </nav>
     </div>
 
-    <div class="region region-reflection-primary-menu">
+    <div class="region-reflection-primary-menu">
       <nav>
         <ul class="menu">
           <li class="menu-item">
@@ -63,7 +62,7 @@
           <li class="menu-item">
             <a href="/blog" title="Blog">Blog</a>
           </li>
-          <li class="menu-item menu-item--active-trail">
+          <li class="menu-item">
             <a href="/about" title="About this site">About</a>
           </li>
           <li class="menu-item">
@@ -73,7 +72,7 @@
       </nav>
     </div>
 
-    <div class="region region-reflection-header">
+    <div class="region-reflection-header">
       <h1>Underline text with jsPdf</h1>
     </div>
 
@@ -88,7 +87,8 @@
           class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item">
           <p>At the time of writing the <a href="https://parall.ax/products/jspdf">jsPDF</a> JavaScript library didn't
             have an underline option for text. This is the code I wrote.</p>
-          <p>For my project the underline distance of 0.3 always worked. I set it as an optional parameter with 0.3 as default value.</p>
+          <p>For my project the underline distance of 0.3 always worked. I set it as an optional parameter with 0.3 as
+            default value.</p>
           <p>The two functions: underline & underlineCenter:</p>
           <label>
 <textarea>
@@ -136,7 +136,7 @@ doc.line(x - textWidth / 2, y + dist, x + textWidth / 2, y + dist);
   </main>
 
   <footer>
-    <div class="region region-footer">
+    <div class="region-footer">
       <p><small>Website by Gunther Willems</small></p>
     </div>
   </footer>

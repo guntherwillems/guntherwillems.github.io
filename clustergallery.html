@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <!-- Key:201902231417 -->
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>ClusterGallery</title>
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="issued" content="2011-06-26"/>
+  <title>ClusterGallery</title>
 
-    <meta name="generator" content="Drupal 8 (https://www.drupal.org)" />
-    <meta name="author" content="Gunther WILLEMS" />
+  <meta name="author" content="Gunther WILLEMS"/>
 
+  <link rel="stylesheet" media="all" href="/main/assets/css/style.css"/>
+  <link rel="stylesheet" media="all" href="/main/assets/font/main_f1.css"/>
+</head>
 
-    <link rel="stylesheet" media="all" href="/main/assets/css/style.css" />
-<link rel="stylesheet" media="all" href="/main/assets/font/main_f1.css" />
-  </head>
-
-  <body>
+<body>
 
 <div class="wrapper" role="main" id="page">
   <div class="canvaswrapper">
@@ -26,16 +25,16 @@
 
   <header>
 
-        <div class="region region-secondary-menu">
-      <nav class="block block-menu navigation menu--account" id="block-cogs-account-menu">
+    <div class="region-secondary-menu">
+      <nav class="menu--account"">
       </nav>
     </div>
-    <div class="region region-header">
-        <h1 class="page-title">ClusterGallery</h1>
+    <div class="region-header">
+      <h1 class="page-title">ClusterGallery</h1>
     </div>
 
-    <div class="region region-primary-menu">
-            <nav>
+    <div class="region-primary-menu">
+      <nav>
         <ul class="menu">
           <li class="menu-item">
             <a href="/">Home</a>
@@ -43,17 +42,18 @@
           <li class="menu-item">
             <a href="/blog" title="Blog">Blog</a>
           </li>
-          <li class="menu-item menu-item--active-trail">
+          <li class="menu-item">
             <a href="/about" title="About this site">About</a>
           </li>
           <li class="menu-item">
             <a href="/sitemap" title="Sitemap">Sitemap</a>
           </li>
         </ul>
-      </nav>    </div>
+      </nav>
+    </div>
 
-    <div class="region region-reflection-primary-menu">
-            <nav>
+    <div class="region-reflection-primary-menu">
+      <nav>
         <ul class="menu">
           <li class="menu-item">
             <a href="/">Home</a>
@@ -61,125 +61,146 @@
           <li class="menu-item">
             <a href="/blog" title="Blog">Blog</a>
           </li>
-          <li class="menu-item menu-item--active-trail">
+          <li class="menu-item">
             <a href="/about" title="About this site">About</a>
           </li>
           <li class="menu-item">
             <a href="/sitemap" title="Sitemap">Sitemap</a>
           </li>
         </ul>
-      </nav>    </div>
+      </nav>
+    </div>
 
-    <div class="region region-reflection-header">
-        <h1>ClusterGallery</h1>
-      </div>
+    <div class="region-reflection-header">
+      <h1>ClusterGallery</h1>
+    </div>
 
   </header>
 
-<main>
+  <main>
 
-  <div class="layout-content">
-    <div class="node__submitted">
-    <p>&#128197; 26-06-2011 &#8226; &Delta; 23-02-2019</p>
-  </div>
-  
-<article>
-<p>The ClusterGallery is a photo gallery for web browsers using the HTML5 Canvas element. The canvas element is a HTML5 tag that supports dynamic scriptable rendering of bitmap images. This could in the future (partly or completely) replace the Adobe Flash player.</p>
+    <div class="layout-content">
+      <div class="node__submitted">
+        <p>&#128197; 26-06-2011 &#8226; &Delta; 23-02-2019</p>
+      </div>
 
-<p>The program is written in Javascript without using external Javascript libraries to keep the code compact. Except for Internet Explorer 6, 7 and 8 that don't support these technologies. Here I use the ExCanvas library from the Google code projects. This library emulates the Canvas element on these web browsers using their VML implementation.</p>
+      <article>
+        <p>The ClusterGallery is a photo gallery for web browsers using the HTML5 Canvas element. The canvas element is
+          a HTML5 tag that supports dynamic scriptable rendering of bitmap images. This could in the future (partly or
+          completely) replace the Adobe Flash player.</p>
 
-<h2>Demo</h2>
+        <p>The program is written in Javascript without using external Javascript libraries to keep the code compact.
+          Except for Internet Explorer 6, 7 and 8 that don't support these technologies. Here I use the ExCanvas library
+          from the Google code projects. This library emulates the Canvas element on these web browsers using their VML
+          implementation.</p>
 
-<p>If you want to see the ClusterGallery in action, check these pages:</p>
+        <h2>Demo</h2>
 
-<p><a href="/main/clustergallerydemo/ClusterGalleryDemo.html">Demo</a><br />
-<a href="photoart">Expressive photography</a><br />
-<a href="fractals">Fractals</a><br />
-<a href="bonsai">Bonsai</a></p>
+        <p>If you want to see the ClusterGallery in action, check these pages:</p>
 
-<h2>Border clustering</h2>
+        <p><a href="/main/clustergallerydemo/ClusterGalleryDemo.html">Demo</a><br/>
+          <a href="photoart">Expressive photography</a><br/>
+          <a href="fractals">Fractals</a><br/>
+          <a href="bonsai">Bonsai</a></p>
 
-<p>With this gallery I use a technique that I call 'Border clustering'. With it you can automatically add an unlimited number of borders on the inside and the outside of the image using some simple parameters. The program name is derived from this idea.</p>
+        <h2>Border clustering</h2>
 
-<p>The syntax for outside borders:<br />
-&nbsp;outerBorders: [borderwidth1, color1, borderwidth2, color2, ...]<br />
-An example of outside borders:<br />
-&nbsp;outerBorders: [.01,"black",.03,"#93856b"]</p>
+        <p>With this gallery I use a technique that I call 'Border clustering'. With it you can automatically add an
+          unlimited number of borders on the inside and the outside of the image using some simple parameters. The
+          program name is derived from this idea.</p>
 
-<p>The syntax for inside border:<br />
-&nbsp;innerBorders: [borderwidth1, color1, transparency1, borderwidth2, color2, transparency2, ...]<br />
-An example of inside border:<br />
-&nbsp;innerBorders: [.04,null,0.5, .006,"#3d393b",0.31]</p>
+        <p>The syntax for outside borders:<br/>
+          &nbsp;outerBorders: [borderwidth1, color1, borderwidth2, color2, ...]<br/>
+          An example of outside borders:<br/>
+          &nbsp;outerBorders: [.01,"black",.03,"#93856b"]</p>
 
-<p>Inside and outside borders can be combined:<br />
-&nbsp;outerBorders: [0.007,"#a74ac7"],<br />
-&nbsp;innerBorders: [.03,"#a74ac7",0.31]</p>
+        <p>The syntax for inside border:<br/>
+          &nbsp;innerBorders: [borderwidth1, color1, transparency1, borderwidth2, color2, transparency2, ...]<br/>
+          An example of inside border:<br/>
+          &nbsp;innerBorders: [.04,null,0.5, .006,"#3d393b",0.31]</p>
 
-<p>You can define a color by using</p>
+        <p>Inside and outside borders can be combined:<br/>
+          &nbsp;outerBorders: [0.007,"#a74ac7"],<br/>
+          &nbsp;innerBorders: [.03,"#a74ac7",0.31]</p>
 
-<ul>
-	<li><a href="https://www.w3schools.com/colors/colors_names.asp">color name</a> : ex. yellow, white, black</li>
-	<li>RGB values : ex. rgb(0,0,0), rgb(255,255,255)</li>
-	<li>hexadecimal notation #rgb or #rrggbb : ex. #eee, #d1d1d1</li>
-	<li>...</li>
-</ul>
+        <p>You can define a color by using</p>
 
-<h2>Border clustering examples</h2>
+        <ul>
+          <li><a href="https://www.w3schools.com/colors/colors_names.asp">color name</a> : ex. yellow, white, black</li>
+          <li>RGB values : ex. rgb(0,0,0), rgb(255,255,255)</li>
+          <li>hexadecimal notation #rgb or #rrggbb : ex. #eee, #d1d1d1</li>
+          <li>...</li>
+        </ul>
 
-<p>These examples in a gallery: <a href="/main/clustergalleryborders/ClusterGalleryBorders.html">link</a></p>
+        <h2>Border clustering examples</h2>
 
-<p class="left">&nbsp;</p>
-<img alt="border example" class="left" src="/main/images/clustergallery/borders/1.jpg" /> outerBorders: [.01,"black", .015,"#eee"]
-<p class="left">&nbsp;</p>
-<img alt="border example" class="left" src="/main/images/clustergallery/borders/2.jpg" /> outerBorders: [0.03,"#eee"]
-<p class="left">&nbsp;</p>
-<img alt="border example" class="left" src="/main/images/clustergallery/borders/3.jpg" /> outerBorders: [0.01,"#465485",0.01,"black", 0.03,"#465485"]
-<p class="left">&nbsp;</p>
-<img alt="border example" class="left" src="/main/images/clustergallery/borders/4.jpg" /> outerBorders: [0.005,"#f6e6cc", 0.01,"#354065", 0.03,"#465485", 0.045,"black", 0.0045,"#465485"]
-<p class="left">&nbsp;</p>
-<img alt="border example" class="left" src="/main/images/clustergallery/borders/5.jpg" /> innerBorders: [.04,null,0.5, .006,"white", 0.5]
-<p class="left">&nbsp;</p>
-<img alt="border example" class="left" src="/main/images/clustergallery/borders/6.jpg" /> outerBorders: [.02,"#b59402"],<br />
-innerBorders: [.02,null,0.5, .01,"#ffd103",0.31]
-<p class="left">&nbsp;</p>
-<img alt="border example" class="left" src="/main/images/clustergallery/borders/7.jpg" /> outerBorders: [0.003,"#ccc", .02,"#404813", 0.01,"black", 0.004,"#937b4a"]
-<p class="left">&nbsp;</p>
-<img alt="border example" class="left" src="/main/images/clustergallery/borders/8.jpg" /> outerBorders: [0.008,"black", 0.004,"#465485", 0.02,"black", 0.02,"#465485", 0.01,"black", 0.004,"#465485"]
-<p class="left">&nbsp;</p>
-<img alt="border example" class="left" src="/main/images/clustergallery/borders/9.jpg" /> outerBorders: [0.005,"black", 0.01,"#562b94", 0.02,"#6740b5"],<br />
-innerBorders: [.01,null,0.5, .01,"#6740b5",0.7]
-<p class="left">&nbsp;</p>
-<img alt="border example" class="left" src="/main/images/clustergallery/borders/10.jpg" />outerBorders: [0.008,"black", 0.004,"white", 0.02,"black", 0.03,"#949372"]
-<p class="left">&nbsp;</p>
-<img alt="border example" class="left" src="/main/images/clustergallery/borders/11.jpg" />outerBorders: [0.007,"#a74ac7"],<br />
-innerBorders: [.03,"#a74ac7",0.31]
-<p class="left">&nbsp;</p>
-<img alt="border example" class="left" src="/main/images/clustergallery/borders/12.jpg" /> outerBorders: [0.004,"#c3cd71", 0.02,"#6a8200"]
-<p class="left">&nbsp;</p>
-<img alt="border example" class="left" src="/main/images/clustergallery/borders/13.jpg" /> outerBorders: [0.015,"black", 0.008,"#465485", 0.05,"black", 0.02,"#465485"]
-<p class="left">&nbsp;</p>
+        <p>These examples in a gallery: <a href="/main/clustergalleryborders/ClusterGalleryBorders.html">link</a></p>
 
-<h2>Browser compatibility</h2>
+        <p class="left">&nbsp;</p>
+        <img alt="border example" class="left" src="/main/images/clustergallery/borders/1.jpg"/> outerBorders:
+        [.01,"black", .015,"#eee"]
+        <p class="left">&nbsp;</p>
+        <img alt="border example" class="left" src="/main/images/clustergallery/borders/2.jpg"/> outerBorders:
+        [0.03,"#eee"]
+        <p class="left">&nbsp;</p>
+        <img alt="border example" class="left" src="/main/images/clustergallery/borders/3.jpg"/> outerBorders:
+        [0.01,"#465485",0.01,"black", 0.03,"#465485"]
+        <p class="left">&nbsp;</p>
+        <img alt="border example" class="left" src="/main/images/clustergallery/borders/4.jpg"/> outerBorders:
+        [0.005,"#f6e6cc", 0.01,"#354065", 0.03,"#465485", 0.045,"black", 0.0045,"#465485"]
+        <p class="left">&nbsp;</p>
+        <img alt="border example" class="left" src="/main/images/clustergallery/borders/5.jpg"/> innerBorders:
+        [.04,null,0.5, .006,"white", 0.5]
+        <p class="left">&nbsp;</p>
+        <img alt="border example" class="left" src="/main/images/clustergallery/borders/6.jpg"/> outerBorders:
+        [.02,"#b59402"],<br/>
+        innerBorders: [.02,null,0.5, .01,"#ffd103",0.31]
+        <p class="left">&nbsp;</p>
+        <img alt="border example" class="left" src="/main/images/clustergallery/borders/7.jpg"/> outerBorders:
+        [0.003,"#ccc", .02,"#404813", 0.01,"black", 0.004,"#937b4a"]
+        <p class="left">&nbsp;</p>
+        <img alt="border example" class="left" src="/main/images/clustergallery/borders/8.jpg"/> outerBorders:
+        [0.008,"black", 0.004,"#465485", 0.02,"black", 0.02,"#465485", 0.01,"black", 0.004,"#465485"]
+        <p class="left">&nbsp;</p>
+        <img alt="border example" class="left" src="/main/images/clustergallery/borders/9.jpg"/> outerBorders:
+        [0.005,"black", 0.01,"#562b94", 0.02,"#6740b5"],<br/>
+        innerBorders: [.01,null,0.5, .01,"#6740b5",0.7]
+        <p class="left">&nbsp;</p>
+        <img alt="border example" class="left" src="/main/images/clustergallery/borders/10.jpg"/>outerBorders:
+        [0.008,"black", 0.004,"white", 0.02,"black", 0.03,"#949372"]
+        <p class="left">&nbsp;</p>
+        <img alt="border example" class="left" src="/main/images/clustergallery/borders/11.jpg"/>outerBorders:
+        [0.007,"#a74ac7"],<br/>
+        innerBorders: [.03,"#a74ac7",0.31]
+        <p class="left">&nbsp;</p>
+        <img alt="border example" class="left" src="/main/images/clustergallery/borders/12.jpg"/> outerBorders:
+        [0.004,"#c3cd71", 0.02,"#6a8200"]
+        <p class="left">&nbsp;</p>
+        <img alt="border example" class="left" src="/main/images/clustergallery/borders/13.jpg"/> outerBorders:
+        [0.015,"black", 0.008,"#465485", 0.05,"black", 0.02,"#465485"]
+        <p class="left">&nbsp;</p>
 
-<p>The gallery has been tested with these Web browsers:</p>
+        <h2>Browser compatibility</h2>
 
-<ul>
-	<li>Internet Explorer 6, 7, 8, 9, 10</li>
-	<li>Firefox 2, 3.6, 4, 20</li>
-	<li>Opera 9, 10</li>
-	<li>Google Chrome 8, 9, 10, 11, 25</li>
-	<li>Safari 5</li>
-</ul>
+        <p>The gallery has been tested with these Web browsers:</p>
 
-<h2>Using the ClusterGallery on a web page</h2>
+        <ul>
+          <li>Internet Explorer 6, 7, 8, 9, 10</li>
+          <li>Firefox 2, 3.6, 4, 20</li>
+          <li>Opera 9, 10</li>
+          <li>Google Chrome 8, 9, 10, 11, 25</li>
+          <li>Safari 5</li>
+        </ul>
 
-<p>Download this file: <a href="/main/download/clustergallery/ClusterGalleryDemo.zip">ClusterGalleryDemo.zip</a><br />
-Inside you can find a full working version.</p>
+        <h2>Using the ClusterGallery on a web page</h2>
 
-<p>This is what you need to add it to a web page:</p>
+        <p>Download this file: <a href="/main/download/clustergallery/ClusterGalleryDemo.zip">ClusterGalleryDemo.zip</a><br/>
+          Inside you can find a full working version.</p>
 
-<p>Add this code in the &lt; head &gt; section of your page:</p>
-<textarea class="code">&lt;!-- BEGIN ClusterGallery --&gt;
+        <p>This is what you need to add it to a web page:</p>
+
+        <p>Add this code in the &lt; head &gt; section of your page:</p>
+        <textarea class="code">&lt;!-- BEGIN ClusterGallery --&gt;
 &lt;!--[if lt IE 9]&gt;
  &lt;script type="text/javascript" src="ClusterGallery/excanvas.compiled.js"&gt;&lt;/script&gt;
 &lt;![endif]--&gt;
@@ -194,12 +215,13 @@ Inside you can find a full working version.</p>
 &lt;!-- END ClusterGallery --&gt;
 </textarea>
 
-<p>Add this code in the &lt; body &gt; section where the gallery will be located.</p>
+        <p>Add this code in the &lt; body &gt; section where the gallery will be located.</p>
 
-<p>You can change the dimension and style parameters as you like. Alternatively add the style parameters in your own CSS files.</p>
+        <p>You can change the dimension and style parameters as you like. Alternatively add the style parameters in your
+          own CSS files.</p>
 
-<p>ClusterGallery with thumbnails:</p>
-<textarea class="code">&lt;!-- BEGIN ClusterGallery --&gt;
+        <p>ClusterGallery with thumbnails:</p>
+        <textarea class="code">&lt;!-- BEGIN ClusterGallery --&gt;
 &lt;noscript&gt;&lt;p&gt;&lt;strong&gt; &gt;&gt; To see the gallery, javascript must be enabled! &lt;&lt; &lt;/strong&gt;&lt;/p&gt;&lt;/noscript&gt;
 &lt;canvas id="GalleryCanvas" width="771" height="450" style="margin: 1px 0px 0px 0px;" &gt;
   Your browser doesn't support the HTML5 canvas element.
@@ -208,8 +230,8 @@ Inside you can find a full working version.</p>
 &lt;!-- END ClusterGallery --&gt;
 </textarea>
 
-<p>ClusterGallery without thumbnails:</p>
-<textarea class="code">&lt;!-- BEGIN ClusterGallery --&gt;
+        <p>ClusterGallery without thumbnails:</p>
+        <textarea class="code">&lt;!-- BEGIN ClusterGallery --&gt;
 &lt;noscript&gt;&lt;p&gt;&lt;strong&gt; &gt;&gt; To see the gallery, javascript must be enabled! &lt;&lt; &lt;/strong&gt;&lt;/p&gt;&lt;/noscript&gt;
 &lt;canvas id="GalleryCanvas" width="771" height="450" style="margin: 1px 0px 0px 0px;" &gt;
   Your browser doesn't support the HTML5 canvas element.
@@ -217,72 +239,85 @@ Inside you can find a full working version.</p>
 &lt;!-- END ClusterGallery --&gt;
 </textarea>
 
-<p>Copy the ClusterGallery files in your web site and adapt the links if needed in the &lt; head &gt; section.</p>
+        <p>Copy the ClusterGallery files in your web site and adapt the links if needed in the &lt; head &gt;
+          section.</p>
 
-<p>The file <strong>ClusterGalleryData.js</strong> contains all the data you can change. Here you can add the folder and the images of the gallery. You can adjust the layout of the ClusterGallery with the parameters at the end of this file. For the parameters remove the comments (//) before the lines you want to change.</p>
+        <p>The file <strong>ClusterGalleryData.js</strong> contains all the data you can change. Here you can add the
+          folder and the images of the gallery. You can adjust the layout of the ClusterGallery with the parameters at
+          the end of this file. For the parameters remove the comments (//) before the lines you want to change.</p>
 
-<p>The folder where the images are located:<br />
-var f1 = "gallery/";</p>
+        <p>The folder where the images are located:<br/>
+          var f1 = "gallery/";</p>
 
-<p>For each image this are the possible parameters:</p>
+        <p>For each image this are the possible parameters:</p>
 
-<ul>
-	<li>&nbsp;<strong>image</strong> : the image location + name</li>
-	<li>&nbsp;<strong>thumb</strong> : the thumbnail image location and name (optional)</li>
-	<li>&nbsp;<strong>title</strong> : a free text field (optional)</li>
-	<li>&nbsp;<strong>descr</strong> : a free text field (optional)</li>
-	<li>&nbsp;<strong>outerBorders</strong> : [borderwidth1, color1, borderwidth2, color2, ...] (optional)</li>
-	<li>&nbsp;<strong>innerBorders</strong> : [borderwidth1, color1, transparency1, borderwidth2, color2, transparency2, ...] (optional)</li>
-	<li>&nbsp;<strong>crop</strong> : [left crop, top crop, right crop, bottom crop] (optional)</li>
-</ul>
+        <ul>
+          <li>&nbsp;<strong>image</strong> : the image location + name</li>
+          <li>&nbsp;<strong>thumb</strong> : the thumbnail image location and name (optional)</li>
+          <li>&nbsp;<strong>title</strong> : a free text field (optional)</li>
+          <li>&nbsp;<strong>descr</strong> : a free text field (optional)</li>
+          <li>&nbsp;<strong>outerBorders</strong> : [borderwidth1, color1, borderwidth2, color2, ...] (optional)</li>
+          <li>&nbsp;<strong>innerBorders</strong> : [borderwidth1, color1, transparency1, borderwidth2, color2,
+            transparency2, ...] (optional)
+          </li>
+          <li>&nbsp;<strong>crop</strong> : [left crop, top crop, right crop, bottom crop] (optional)</li>
+        </ul>
 
-<h2>Global parameters</h2>
+        <h2>Global parameters</h2>
 
-<p>At the end of the file <a href="/main/clustergallerydemo/ClusterGalleryData.js">ClusterGalleryData.js</a> global parameters can be defined. To use them, remove // before the line and change the value. After each line a short description is given. Some examples:</p>
+        <p>At the end of the file <a href="/main/clustergallerydemo/ClusterGalleryData.js">ClusterGalleryData.js</a>
+          global parameters can be defined. To use them, remove // before the line and change the value. After each line
+          a short description is given. Some examples:</p>
 
-<ul>
-	<li><strong>defaultTitle</strong> = "Type the title here"; : the default title if no image title is given</li>
-	<li><strong>defaultDescription</strong> = "Type the description here"; : the default description if no image description is given</li>
-	<li><strong>outerBorders</strong> = [0.01,"white"]; : the default border around the images if no image border is defined.</li>
-	<li><strong>showSlideshowIcon</strong> = false; : can the viewer start/stop the slideshow?</li>
-	<li><strong>autoSlideshow</strong> = true; : Start the slideshow automatically</li>
-	<li><strong>showFullScreenIcon</strong> = false; : Can the viewer go to full screen mode?</li>
-	<li><strong>nextImageSpeed</strong> = 3000; : in milliseconds</li>
-	<li><strong>useImagesAsThumbs</strong> = true; : if no thumb is defined for an image, use the full image</li>
-	<li><strong>thumbSize</strong> = "50px"; : used if useImagesAsThumbs is true</li>
-	<li>...</li>
-</ul>
+        <ul>
+          <li><strong>defaultTitle</strong> = "Type the title here"; : the default title if no image title is given</li>
+          <li><strong>defaultDescription</strong> = "Type the description here"; : the default description if no image
+            description is given
+          </li>
+          <li><strong>outerBorders</strong> = [0.01,"white"]; : the default border around the images if no image border
+            is defined.
+          </li>
+          <li><strong>showSlideshowIcon</strong> = false; : can the viewer start/stop the slideshow?</li>
+          <li><strong>autoSlideshow</strong> = true; : Start the slideshow automatically</li>
+          <li><strong>showFullScreenIcon</strong> = false; : Can the viewer go to full screen mode?</li>
+          <li><strong>nextImageSpeed</strong> = 3000; : in milliseconds</li>
+          <li><strong>useImagesAsThumbs</strong> = true; : if no thumb is defined for an image, use the full image</li>
+          <li><strong>thumbSize</strong> = "50px"; : used if useImagesAsThumbs is true</li>
+          <li>...</li>
+        </ul>
 
-<h2>Source code:</h2>
+        <h2>Source code:</h2>
 
-<p>The source code can be found here: <a href="/main/js/ClusterGallery.src.js">ClusterGallery.src.js</a></p>
+        <p>The source code can be found here: <a href="/main/js/ClusterGallery.src.js">ClusterGallery.src.js</a></p>
 
-<p class="title">Possible future versions</p>
+        <p class="title">Possible future versions</p>
 
-<p>Because I use the canvas element there are many options for developing special effects.</p>
+        <p>Because I use the canvas element there are many options for developing special effects.</p>
 
-<p>I would like to add transition effects like fade, slide, swarm, ...</p>
+        <p>I would like to add transition effects like fade, slide, swarm, ...</p>
 
-<p>Because the ExCanvas library used for older Internet Explorer browsers is much slower, these effects will only be seen on the HTML5 compatible web browsers. This way the ClusterGallery will be usable on all the web browsers used today.</p>
+        <p>Because the ExCanvas library used for older Internet Explorer browsers is much slower, these effects will
+          only be seen on the HTML5 compatible web browsers. This way the ClusterGallery will be usable on all the web
+          browsers used today.</p>
 
-<h2>Version history</h2>
+        <h2>Version history</h2>
 
-<p>1.0 : 14/05/2011 : initial version</p>
+        <p>1.0 : 14/05/2011 : initial version</p>
 
-<p>1.1 : 09/04/2013 : added crop parameter in ClusterGalleryData.js</p>
-</article>
+        <p>1.1 : 09/04/2013 : added crop parameter in ClusterGalleryData.js</p>
+      </article>
     </div>
 
-</main>
+  </main>
 
   <footer>
-    <div class="region region-footer">
-          <p><small>Website by Gunther Willems</small></p>
+    <div class="region-footer">
+      <p><small>Website by Gunther Willems</small></p>
     </div>
   </footer>
 
 </div>
 
 <script src="/main/assets/js/mainannimation.js"></script>
-  </body>
+</body>
 </html>
